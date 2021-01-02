@@ -1,31 +1,47 @@
-.App-header {
+.name {
+  margin-top: 1em;
   min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: solid black 1px;
+  width: 100vw;
 }
 
-.App-header .title {
+.name .title {
   font-size: calc(1rem + ((1vw - 0.01em) * 4.2553));
   min-height: 0vw;
   display: inline-flex;
 }
 
 @media (min-width: 48em) {
-  .App-header .title {
+  .name .title {
     font-size: calc(1rem + ((1vw - 0.48em) * 4.7619));
   }
 }
 
 @media (min-width: 90em) {
-  .App-header .title {
+  .name .title {
     font-size: 3em;
   }
 }
 
-.App-header .subtitle {
+.name .subtitle {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: right;
   padding: 0 3em;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  padding: 0 2em;
 }
