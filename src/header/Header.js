@@ -31,6 +31,11 @@ const Header = () => {
           <span>independiente</span>
         </div>
       </div>
+      <div className="slogan">
+        <h2>
+          Mapeo del panorama cultural desde las problemáticas de lo digital
+        </h2>
+      </div>
     </header>
   )
 }

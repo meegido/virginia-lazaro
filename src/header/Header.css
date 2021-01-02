@@ -1,11 +1,14 @@
+.header {
+  overflow: hidden;
+  width: 100%;
+}
+
 .name {
-  margin-top: 1em;
-  min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid black 1px;
-  width: 100vw;
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 .name .title {
@@ -14,23 +17,12 @@
   display: inline-flex;
 }
 
-@media (min-width: 48em) {
-  .name .title {
-    font-size: calc(1rem + ((1vw - 0.48em) * 4.7619));
-  }
-}
-
-@media (min-width: 90em) {
-  .name .title {
-    font-size: 3em;
-  }
-}
-
 .name .subtitle {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  padding: 0 3em;
+  display: none;
+}
+
+.slogan {
+  border-bottom: 1px solid black;
 }
 
 .nav {
@@ -44,4 +36,35 @@
 
 .nav ul li {
   padding: 0 2em;
+}
+
+.nav ul li:first-child {
+  padding-left: 0;
+}
+
+@media (min-width: 48em) {
+  .name .title {
+    font-size: calc(1rem + ((1vw - 0.48em) * 4.7619));
+  }
+
+  .name .subtitle {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0 6em;
+  }
+}
+
+@media (min-width: 90em) {
+  .name .title {
+    font-size: 3em;
+  }
+
+  .name .subtitle {
+    padding: 0 10em;
+  }
+
+  .nav ul li {
+    padding: 0 4em;
+  }
 }
