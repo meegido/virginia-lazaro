@@ -9,7 +9,8 @@
 
 body {
   margin: 0;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'New York Extra Large Regular';
+  letter-spacing: 0.32px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7edc3;
@@ -25,4 +26,84 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+@font-face {
+  font-family: 'New York Extra Large Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Regular'),
+    url('./fonts/NewYorkExtraLargeRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Regular Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Regular Italic'),
+    url('./fonts/NewYorkExtraLargeRegularItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Medium'),
+    url('./fonts/NewYorkExtraLargeMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Medium Italic'),
+    url('./fonts/NewYorkExtraLargeMediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Bold'),
+    url('./fonts/NewYorkExtraLargeBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Semibold'),
+    url('./fonts/NewYorkExtraLargeSemibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Bold Italic'),
+    url('./fonts/NewYorkExtraLargeBoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Semibold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Semibold Italic'),
+    url('./fonts/NewYorkExtraLargeSemiboldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Black'),
+    url('./fonts/NewYorkExtraLargeBlack.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'New York Extra Large Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('New York Extra Large Black Italic'),
+    url('./fonts/NewYorkExtraLargeBlackItalic.woff') format('woff');
 }
