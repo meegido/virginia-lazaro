@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: 'New York Extra Large Regular';
   letter-spacing: 0.32px;
+  color: #212529;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f7edc3;
@@ -26,6 +27,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #0077b6;
 }
 
 @font-face {
