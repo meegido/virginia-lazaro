@@ -1,6 +1,6 @@
-import Header from '../header/Header'
+import Header from '../../header/Header'
 import {useEffect, useState} from 'react'
-import {client} from '../client/api-client'
+import {client} from '../../client/api-client'
 
 function Home() {
   const [loaded, setStatus] = useState(false)
