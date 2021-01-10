@@ -1,18 +1,19 @@
 import Header from '../../header/Header'
 import {useEffect, useState} from 'react'
-import {client} from '../../client/api-client'
+import * as ApiClient from '../../client/ApiClient'
+import './Home.css'
 
 function Home() {
   const [loaded, setStatus] = useState(false)
-  const [categories, setCategories] = useState()
+  const [categories, setCategories] = useState({
+    culture: [],
+  })
 
   useEffect(() => {
-    client('https://virginialazaro.herokuapp.com/categories/').then(
-      categories => {
-        setCategories(categories)
-        setStatus(true)
-      },
-    )
+    ApiClient.fetchCategories().then(categories => {
+      setCategories(categories)
+      setStatus(true)
+    })
   }, [])
 
   const isLoaded = loaded && categories
@@ -31,7 +32,7 @@ function Home() {
 
 function Category({name, articles}) {
   return (
-    <div className={`category-${name}`}>
+    <div className={`category ${name}`}>
       <h3>{name}</h3>
       {articles.map(article => {
         return (
