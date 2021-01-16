@@ -1,6 +1,7 @@
 import Header from '../../header/Header'
 import {useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
+import Article from '../../article/Article'
 import './Home.css'
 
 function Home() {
@@ -10,10 +11,13 @@ function Home() {
   })
 
   useEffect(() => {
-    ApiClient.fetchCategories().then(categories => {
-      setCategories(categories)
-      setStatus(true)
-    })
+    const waitContent = async () => {
+      await ApiClient.fetchCategories().then(categories => {
+        setCategories(categories)
+        setStatus(true)
+      })
+    }
+    waitContent()
   }, [])
 
   const isLoaded = loaded && categories
@@ -30,16 +34,19 @@ function Home() {
   )
 }
 
-function Category({name, articles}) {
+function Category({name, articles, excerpt}) {
   return (
     <div className={`category ${name}`}>
       <h3>{name}</h3>
       {articles.map(article => {
         return (
-          <article>
-            <p>{article.title}</p>
-            <img src={article.image_url} alt="imagen" />
-          </article>
+          <Article
+            title={article.title}
+            image={article.image_url}
+            excerpt={article.excerpt}
+            publication_date={article.publication_date}
+            media_title={article.media_title}
+          />
         )
       })}
     </div>
