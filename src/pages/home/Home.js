@@ -43,7 +43,7 @@ function Category({name, articles}) {
           <Article
             key={article.title}
             title={article.title}
-            image={article.image_url}
+            image_url={article.image_url}
             excerpt={article.excerpt}
             publication_date={article.publication_date}
             media_title={article.media_title}
