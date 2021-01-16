@@ -1,0 +1,9 @@
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+}

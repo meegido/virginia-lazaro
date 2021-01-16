@@ -25,32 +25,40 @@ function Home() {
   return (
     <div className="App">
       <Header />
-      {isLoaded && <Category articles={categories.culture} name="culture" />}
-      {isLoaded && (
-        <Category articles={categories.interviews} name="interviews" />
-      )}
-      {isLoaded && <Category articles={categories.pixels} name="pixels" />}
+      <div className="home">
+        {isLoaded && (
+          <HomeCategory articles={categories.culture} name="culture" />
+        )}
+        {isLoaded && (
+          <HomeCategory articles={categories.interviews} name="interviews" />
+        )}
+        {isLoaded && (
+          <HomeCategory articles={categories.pixels} name="pixels" />
+        )}
+      </div>
     </div>
   )
 }
 
-function Category({name, articles}) {
+function HomeCategory({name, articles}) {
   return (
     <div className={`category ${name}`}>
-      <h3>{name}</h3>
-      {articles.map(article => {
-        return (
-          <Article
-            key={article.title}
-            title={article.title}
-            image_url={article.image_url}
-            excerpt={article.excerpt}
-            publication_date={article.publication_date}
-            media_title={article.media_title}
-            media_link={article.media_link}
-          />
-        )
-      })}
+      <h2>{name}</h2>
+      <div className="row">
+        {articles.map(article => {
+          return (
+            <Article
+              key={article.title}
+              title={article.title}
+              image_url={article.image_url}
+              excerpt={article.excerpt}
+              publication_date={article.publication_date}
+              media_title={article.media_title}
+              media_link={article.media_link}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }

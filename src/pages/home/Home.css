@@ -1,3 +1,18 @@
-.category h3 {
-  text-transform: capitalize;
+.category h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+.category.culture h2 {
+  margin-left: 0.3em;
+  margin-right: 2.6em;
+  padding: 0.3em 0;
+  text-align: left;
+}
+
+@media (min-width: 48em) {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
 }
