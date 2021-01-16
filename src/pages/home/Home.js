@@ -34,18 +34,20 @@ function Home() {
   )
 }
 
-function Category({name, articles, excerpt}) {
+function Category({name, articles}) {
   return (
     <div className={`category ${name}`}>
       <h3>{name}</h3>
       {articles.map(article => {
         return (
           <Article
+            key={article.title}
             title={article.title}
             image={article.image_url}
             excerpt={article.excerpt}
             publication_date={article.publication_date}
             media_title={article.media_title}
+            media_link={article.media_link}
           />
         )
       })}
