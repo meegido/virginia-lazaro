@@ -9,12 +9,14 @@ function Article({
   excerpt,
 }) {
   return (
-    <div className="wrapper">
-      <h3>{title}</h3>
-      <a href={media_link}>{media_title}</a>
+    <div className="article">
+      <h3 className="article-title">{title}</h3>
+      <div className="article-info">
+        <a href={media_link}>{media_title}</a>
+        <p>{publication_date}</p>
+      </div>
       <img className="image" src={image_url} alt="article" />
-      <p>{publication_date}</p>
-      <p>{excerpt}</p>
+      <p class="excerpt">{excerpt}</p>
     </div>
   )
 }
