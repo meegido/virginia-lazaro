@@ -6,16 +6,13 @@ import './Home.css'
 
 function Home() {
   const [loaded, setStatus] = useState(false)
-  const [categories, setCategories] = useState({
-    culture: [],
-  })
+  const [categories, setCategories] = useState({})
 
   useEffect(() => {
     const waitContent = async () => {
-      await ApiClient.fetchCategories().then(categories => {
-        setCategories(categories)
-        setStatus(true)
-      })
+      const categories = await ApiClient.fetchCategories()
+      setCategories(categories)
+      setStatus(true)
     }
     waitContent()
   }, [])
@@ -25,17 +22,13 @@ function Home() {
   return (
     <div className="App">
       <Header />
-      <div className="home">
-        {isLoaded && (
+      {isLoaded && (
+        <div className="home">
           <HomeCategory articles={categories.culture} name="culture" />
-        )}
-        {isLoaded && (
           <HomeCategory articles={categories.interviews} name="interviews" />
-        )}
-        {isLoaded && (
           <HomeCategory articles={categories.pixels} name="pixels" />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
