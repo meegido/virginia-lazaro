@@ -9,12 +9,12 @@ function Home() {
   const [categories, setCategories] = useState({})
 
   useEffect(() => {
-    const waitContent = async () => {
+    const loadCategories = async () => {
       const categories = await ApiClient.fetchCategories()
       setCategories(categories)
       setStatus(true)
     }
-    waitContent()
+    loadCategories()
   }, [])
 
   const isLoaded = loaded && categories
