@@ -16,7 +16,7 @@ function Article({
         <p>{publication_date}</p>
       </div>
       <img className="image" src={image_url} alt="article" />
-      <p class="excerpt">{excerpt}</p>
+      <p className="excerpt">{excerpt}</p>
     </div>
   )
 }
