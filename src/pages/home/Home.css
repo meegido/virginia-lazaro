@@ -21,6 +21,15 @@
   .home {
     margin: 0 2em;
   }
+
+  .category-title.pixels {
+    margin-left: 0.7em;
+  }
+
+  .category-title.culture,
+  .category-title.interviews {
+    margin-right: 0.7em;
+  }
 }
 
 @media (min-width: 48em) {

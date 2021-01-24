@@ -67,3 +67,36 @@
     padding-left: 0;
   }
 }
+
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+  .article {
+    margin: 0 1em;
+  }
+
+  .article-title {
+    border-top: 1px solid black;
+    padding-top: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .article:first-child .article-title,
+  .article:nth-child(2) .article-title,
+  .article:nth-child(3) .article-title {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .article .article-image {
+    background-size: cover;
+    border-radius: 0.3em;
+    height: 350px;
+    width: 100%;
+  }
+}
