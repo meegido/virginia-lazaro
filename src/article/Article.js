@@ -24,7 +24,7 @@ function Article({
           alt="article"
         ></div>
       </div>
-      <p class="excerpt">{excerpt}</p>
+      <p className="excerpt">{excerpt}</p>
     </div>
   )
 }

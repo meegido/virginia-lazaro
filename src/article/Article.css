@@ -4,6 +4,10 @@
   width: 95%;
 }
 
+.article-title {
+  height: auto;
+}
+
 .article:first-child .article-title {
   border-top: 1px solid black;
   padding-top: 0.5em;
@@ -62,7 +66,6 @@
     padding-top: 0.5em;
     margin-top: 0;
     margin-bottom: 0;
-    height: 10%;
   }
 
   .article:first-child .article-title,
