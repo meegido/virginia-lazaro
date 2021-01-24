@@ -45,6 +45,7 @@ function HomeCategory({name, articles}) {
         {articles.map(article => {
           return (
             <Article
+              name={name}
               key={article.title}
               title={article.title}
               image_url={article.image_url}

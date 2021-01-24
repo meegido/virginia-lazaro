@@ -7,9 +7,10 @@ function Article({
   media_link,
   media_title,
   excerpt,
+  name,
 }) {
   return (
-    <div className="article">
+    <div className={`article ${name}`}>
       <h3 className="article-title">{title}</h3>
       <div className="article-info">
         <a href={media_link}>{media_title}</a>

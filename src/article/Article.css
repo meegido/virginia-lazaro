@@ -57,7 +57,7 @@
     margin: 0 1em;
   }
 
-  .article:nth-child(2) {
+  .article.pixels:nth-child(2) {
     flex: 1 0 63%;
   }
 
