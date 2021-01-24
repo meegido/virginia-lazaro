@@ -15,7 +15,15 @@ function Article({
         <a href={media_link}>{media_title}</a>
         <p>{publication_date}</p>
       </div>
-      <img className="image" src={image_url} alt="article" />
+      <div className="image-container">
+        <div
+          className="article-image"
+          style={{
+            backgroundImage: 'url(' + image_url + ')',
+          }}
+          alt="article"
+        ></div>
+      </div>
       <p class="excerpt">{excerpt}</p>
     </div>
   )

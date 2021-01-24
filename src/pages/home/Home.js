@@ -27,13 +27,13 @@ function Home() {
       <Header />
       <div className="home">
         {isLoaded && (
+          <HomeCategory articles={categories.pixels} name="pixels" />
+        )}
+        {isLoaded && (
           <HomeCategory articles={categories.culture} name="culture" />
         )}
         {isLoaded && (
           <HomeCategory articles={categories.interviews} name="interviews" />
-        )}
-        {isLoaded && (
-          <HomeCategory articles={categories.pixels} name="pixels" />
         )}
       </div>
     </div>
