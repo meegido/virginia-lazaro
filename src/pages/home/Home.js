@@ -41,7 +41,7 @@ function HomeCategory({name, articles}) {
   return (
     <div className={`category ${name}`}>
       <h2 className={`category-title ${name}`}>{name}</h2>
-      <div className="row">
+      <div className={`row ${name}`}>
         {articles.map(article => {
           return (
             <Article

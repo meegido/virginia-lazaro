@@ -53,11 +53,16 @@
     margin: 0 1em;
   }
 
+  .article:nth-child(2) {
+    flex: 1 0 63%;
+  }
+
   .article-title {
     border-top: 1px solid black;
     padding-top: 0.5em;
     margin-top: 0;
     margin-bottom: 0;
+    height: 10%;
   }
 
   .article:first-child .article-title,

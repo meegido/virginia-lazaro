@@ -94,10 +94,11 @@
 
 @media (min-width: 90em) {
   .name .title {
-    font-size: 3em;
+    font-size: 3.2em;
   }
 
   .name .subtitle {
+    font-size: 0.9rem;
     padding: 0 10em;
   }
 
