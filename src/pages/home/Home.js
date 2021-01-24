@@ -6,18 +6,15 @@ import './Home.css'
 
 function Home() {
   const [loaded, setStatus] = useState(false)
-  const [categories, setCategories] = useState({
-    culture: [],
-  })
+  const [categories, setCategories] = useState({})
 
   useEffect(() => {
-    const waitContent = async () => {
-      await ApiClient.fetchCategories().then(categories => {
-        setCategories(categories)
-        setStatus(true)
-      })
+    const loadCategories = async () => {
+      const categories = await ApiClient.fetchCategories()
+      setCategories(categories)
+      setStatus(true)
     }
-    waitContent()
+    loadCategories()
   }, [])
 
   const isLoaded = loaded && categories
