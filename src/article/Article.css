@@ -17,6 +17,18 @@
   text-align: right;
 }
 
+.article:nth-child(2) .article-title {
+  text-align: left;
+  margin-bottom: 0em;
+  margin-right: 5em;
+}
+
+.article:nth-child(3) .article-title {
+  text-align: left;
+  margin-bottom: 0em;
+  margin-right: 5em;
+}
+
 .article-info {
   display: flex;
   flex-direction: row;
@@ -32,12 +44,6 @@
   text-align: left;
 }
 
-.article:nth-child(2) .article-title {
-  text-align: left;
-  margin-bottom: 0em;
-  margin-right: 5em;
-}
-
 .article .article-image {
   height: 300px;
   width: 100%;
@@ -46,19 +52,43 @@
   border-radius: 0.2em;
 }
 
-.article:nth-child(3) .article-title {
-  text-align: left;
-  margin-bottom: 0em;
-  margin-right: 5em;
-}
-
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .article {
     margin: 0 1em;
   }
 
+  .row.culture,
+  .row.interviews,
+  .row.pixels {
+    flex-wrap: wrap;
+  }
+
+  .article.pixels:first-child {
+    width: 34%;
+  }
+
   .article.pixels:nth-child(2) {
-    flex: 1 0 63%;
+    width: 57%;
+  }
+
+  .article.culture:first-child {
+    width: 34%;
+  }
+
+  .article.culture:nth-child(2) {
+    width: 57%;
+  }
+
+  .article.culture:nth-child(3) {
+    width: 50%;
+  }
+
+  .article.interviews:first-child {
+    width: 54%;
+  }
+
+  .article.interviews:nth-child(2) {
+    width: 34%;
   }
 
   .article-title {
@@ -106,5 +136,39 @@
     border-radius: 0.3em;
     height: 350px;
     width: 100%;
+  }
+}
+
+@media (min-width: 90em) {
+  .article {
+    margin: 0 2em;
+  }
+
+  .article.culture:first-child {
+    width: 20%;
+  }
+
+  .article.culture:nth-child(2) {
+    width: 41%;
+  }
+
+  .article.culture:nth-child(3) {
+    width: 22%;
+  }
+
+  .article.interviews:first-child {
+    width: 34%;
+  }
+
+  .article.interviews:nth-child(2) {
+    width: 54%;
+  }
+
+  .article.pixels:first-child {
+    width: 54%;
+  }
+
+  .article.pixels:nth-child(2) {
+    width: 34%;
   }
 }
