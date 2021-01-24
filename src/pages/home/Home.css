@@ -1,20 +1,26 @@
-.category h2 {
+.category-title {
   text-transform: uppercase;
   padding: 0.3em 0;
   margin-bottom: 0;
 }
 
-.category.pixels h2 {
+.category-title.pixels {
   margin-left: 0.5em;
   margin-right: 0.5em;
   text-align: left;
 }
 
-.category.culture h2,
-.category.interviews h2 {
+.category-title.culture,
+.category-title.interviews {
   margin-right: 0.5em;
   margin-left: 0.5em;
   text-align: right;
+}
+
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .home {
+    margin: 0 2em;
+  }
 }
 
 @media (min-width: 48em) {
