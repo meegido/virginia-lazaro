@@ -1,3 +1,5 @@
+import '../assets/posterize.svg'
+
 import './Article.css'
 
 function Article({
@@ -10,7 +12,10 @@ function Article({
   name,
 }) {
   const handleApplyFilter = (event) => {
-    event.target.className = 'article-image brightness'
+    const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert', 'posterize']
+    const filter = filters[Math.floor(Math.random() * filters.length)]
+
+    event.target.className = `article-image ${filter}`
   }
 
   const hangleRemoveFilter = (event) => {

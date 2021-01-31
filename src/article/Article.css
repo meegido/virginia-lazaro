@@ -56,10 +56,27 @@
   filter: blur(5px) grayscale(10%);
 }
 
-.brightness {
+.contrast {
   filter: brightness(90%);
   filter: contrast(400%);
 }
+
+.saturate {
+  filter: saturate(500%)
+}
+
+.hue {
+  filter: hue-rotate(270deg);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.posterize {
+  filter: url(#posterize)
+}
+
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .article {
