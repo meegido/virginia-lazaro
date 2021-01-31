@@ -53,8 +53,12 @@
 }
 
 .blur {
-  filter: blur(20px) grayscale(20%);
+  filter: blur(5px) grayscale(10%);
+}
 
+.brightness {
+  filter: brightness(90%);
+  filter: contrast(400%);
 }
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {

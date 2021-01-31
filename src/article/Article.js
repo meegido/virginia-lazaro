@@ -10,7 +10,7 @@ function Article({
   name,
 }) {
   const handleApplyFilter = (event) => {
-    event.target.className = 'article-image blur'
+    event.target.className = 'article-image brightness'
   }
 
   const hangleRemoveFilter = (event) => {
