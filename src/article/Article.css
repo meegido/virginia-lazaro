@@ -145,11 +145,11 @@
   }
 
   .article.culture:first-child {
-    width: 20%;
+    width: 16%;
   }
 
   .article.culture:nth-child(2) {
-    width: 41%;
+    width: 45%;
   }
 
   .article.culture:nth-child(3) {

@@ -13,7 +13,7 @@
 .category-title.culture,
 .category-title.interviews {
   margin-right: 0.5em;
-  margin-left: 0.5em;
+  /* margin-left: 0.5em; */
   text-align: right;
 }
 
@@ -45,11 +45,13 @@
   }
 
   .category-title.pixels {
-    margin-left: 2.5em;
+    margin-left: 1.3em;
+    margin-right: 0;
   }
 
   .category-title.culture,
   .category-title.interviews {
-    margin-right: 2.5em;
+    margin-right: 3em;
+    margin-left: 0;
   }
 }
