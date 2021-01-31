@@ -9,6 +9,14 @@ function Article({
   excerpt,
   name,
 }) {
+  const handleApplyFilter = (event) => {
+    event.target.className = 'article-image blur'
+  }
+
+  const hangleRemoveFilter = (event) => {
+    event.target.className = 'article-image'
+  }
+
   return (
     <div className={`article ${name}`}>
       <h3 className="article-title">{title}</h3>
@@ -16,7 +24,7 @@ function Article({
         <a href={media_link}>{media_title}</a>
         <p>{publication_date}</p>
       </div>
-      <div className="image-container">
+      <div className="image-container" onMouseEnter={handleApplyFilter} onMouseLeave={hangleRemoveFilter}>
         <div
           className="article-image"
           style={{
