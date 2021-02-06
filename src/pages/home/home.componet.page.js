@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
 import {Header} from '../../components/header/header.component'
 import {HomeCategory} from '../../components/home-category/home-category.component'
-import './home.css'
+import './home.styles.css'
 
 export const Home = () => {
   const [loaded, setStatus] = useState(false)
