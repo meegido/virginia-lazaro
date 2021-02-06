@@ -17,10 +17,6 @@ export const Article = ({
     event.target.className = `article-image ${filter}`
   }
 
-  const hangleRemoveFilter = (event) => {
-    event.target.className = 'article-image'
-  }
-
   return (
     <article className={`article ${name}`}>
       <h3 className="article-title">{title}</h3>
@@ -29,7 +25,7 @@ export const Article = ({
         <p className="date">{publication_date}</p>
       </div>
       <div className="article-content">
-        <div className="image-container" onMouseEnter={handleApplyFilter} onMouseLeave={hangleRemoveFilter}>
+        <div className="image-container" onMouseEnter={handleApplyFilter}>
           <div
             className="article-image"
             style={{
