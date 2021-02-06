@@ -12,7 +12,24 @@
   text-align: right;
 }
 
-@media only screen and (min-width: 25em) and (orientation: landscape) {}
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .row {
+    display: grid;
+    grid-gap: 4em;
+  }
+
+  .row.pixels {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row.culture {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .row.interviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (min-width: 48em) {}
 

@@ -83,10 +83,11 @@
   border-radius: 0.2em;
 }
 
-
-
 @media only screen and (min-width: 25em) and (orientation: landscape) {
-
+  .article:nth-child(2),
+  .article:nth-child(3) {
+  border-top: 1px solid black;
+}
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
