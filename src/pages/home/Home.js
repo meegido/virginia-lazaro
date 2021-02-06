@@ -4,7 +4,7 @@ import * as ApiClient from '../../client/ApiClient'
 import {HomeCategory} from '../../components/home-category/home-category.component'
 import './home.css'
 
-export const Home = () => {
+function Home() = {
   const [loaded, setStatus] = useState(false)
   const [categories, setCategories] = useState({})
 
@@ -36,3 +36,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home
