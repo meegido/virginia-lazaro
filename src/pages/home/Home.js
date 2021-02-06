@@ -1,10 +1,10 @@
-import Header from '../../components/header/header.component'
 import {useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
+import {Header} from '../../components/header/header.component'
 import {HomeCategory} from '../../components/home-category/home-category.component'
 import './home.css'
 
-function Home() = {
+export const Home = () => {
   const [loaded, setStatus] = useState(false)
   const [categories, setCategories] = useState({})
 
@@ -36,5 +36,3 @@ function Home() = {
     </div>
   )
 }
-
-export default Home

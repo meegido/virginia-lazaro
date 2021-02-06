@@ -1,7 +1,7 @@
 import {Link} from '@reach/router'
 import './header.styles.css'
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className="main-header">
       <nav className="nav">
@@ -37,5 +37,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header
