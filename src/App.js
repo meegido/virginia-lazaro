@@ -1,5 +1,5 @@
 import {Router} from '@reach/router'
-import {Home} from './pages/home/home'
+import {Home} from './pages/home/home.componet.page'
 
 function App() {
   return (
