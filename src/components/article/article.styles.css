@@ -1,56 +1,3 @@
-.article {
-  margin: 0 auto;
-  padding-bottom: 0.5em;
-  width: 95%;
-}
-
-.article-title {
-  height: auto;
-}
-
-.article:first-child .article-title {
-  border-top: 1px solid black;
-  padding-top: 0.5em;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 3.5em;
-  text-align: right;
-}
-
-.article:nth-child(2) .article-title {
-  text-align: left;
-  margin-bottom: 0em;
-  margin-right: 5em;
-}
-
-.article:nth-child(3) .article-title {
-  text-align: left;
-  margin-bottom: 0em;
-  margin-right: 5em;
-}
-
-.article-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.article-info p {
-  margin: 0.5em 0em;
-}
-
-.excerpt {
-  text-align: left;
-}
-
-.article .article-image {
-  height: 300px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 0.2em;
-}
 
 .blur {
   filter: blur(5px) grayscale(10%);
@@ -77,124 +24,83 @@
   filter: url(#posterize)
 }
 
+.article {
+  border-top: 1px solid black;
+}
+
+.article:nth-child(2),
+.article:nth-child(3) {
+  border-top: none;
+}
+
+.article-title {
+  height: auto;
+  margin: 0.5em 0 0.2em 0;
+}
+
+.article.pixels:first-child .article-title {
+  text-align: left;
+}
+
+.article.pixels:nth-child(2) .article-title {
+  text-align: right;
+}
+
+.article.culture:first-child .article-title,
+.article.culture:nth-child(3) .article-title {
+  text-align: right;
+}
+
+.article.culture:nth-child(2) .article-title {
+  text-align: left;
+}
+
+.article.interviews:first-child .article-title {
+  text-align: right;
+}
+
+.article.interviews:nth-child(2) .article-title{
+  text-align: left;
+}
+
+.article-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.article-info .date {
+  margin: 0.5em 0em;
+  font-size: .9em;
+}
+
+.article .article-image {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.2em;
+}
+
+
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
-  .article {
-    margin: 0 1em;
-  }
 
-  .row.culture,
-  .row.interviews,
-  .row.pixels {
-    flex-wrap: wrap;
-  }
-
-  .article.pixels:first-child {
-    width: 34%;
-  }
-
-  .article.pixels:nth-child(2) {
-    width: 57%;
-  }
-
-  .article.culture:first-child {
-    width: 34%;
-  }
-
-  .article.culture:nth-child(2) {
-    width: 57%;
-  }
-
-  .article.culture:nth-child(3) {
-    width: 50%;
-  }
-
-  .article.interviews:first-child {
-    width: 54%;
-  }
-
-  .article.interviews:nth-child(2) {
-    width: 34%;
-  }
-
-  .article-title {
-    border-top: 1px solid black;
-    padding-top: 0.5em;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .article:first-child .article-title,
-  .article:nth-child(2) .article-title,
-  .article:nth-child(3) .article-title {
-    margin-right: 0;
-    padding-left: 0;
-  }
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
-  .article {
-    margin: 0 1em;
-  }
-
-  .article-title {
-    border-top: 1px solid black;
-    padding-top: 0.5em;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 10%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .article:first-child .article-title,
-  .article:nth-child(2) .article-title,
-  .article:nth-child(3) .article-title {
-    margin-right: 0;
-    padding-left: 0;
-  }
 }
 
 @media only screen and (min-width: 64em) {
-  .article .article-image {
+  /* .article .article-image {
     background-size: cover;
     border-radius: 0.3em;
     height: 350px;
     width: 100%;
-  }
+  } */
 }
 
 @media (min-width: 90em) {
-  .article {
-    margin: 0 2em;
-  }
 
-  .article.culture:first-child {
-    width: 16%;
-  }
-
-  .article.culture:nth-child(2) {
-    width: 45%;
-  }
-
-  .article.culture:nth-child(3) {
-    width: 22%;
-  }
-
-  .article.interviews:first-child {
-    width: 34%;
-  }
-
-  .article.interviews:nth-child(2) {
-    width: 54%;
-  }
-
-  .article.pixels:first-child {
-    width: 54%;
-  }
-
-  .article.pixels:nth-child(2) {
-    width: 34%;
-  }
 }

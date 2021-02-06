@@ -1,7 +1,7 @@
-import Header from '../../header/header.component'
+import Header from '../../components/header/header.component'
 import {useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
-import {HomeCategory} from '../../home-category/home-category.component'
+import {HomeCategory} from '../../components/home-category/home-category.component'
 import './home.css'
 
 export const Home = () => {

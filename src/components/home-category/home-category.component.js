@@ -2,7 +2,7 @@ import {Article} from '../article/article.component'
 import './home-category.styles.css'
 
 export const HomeCategory = ({name, articles}) => (
-  <div className={`category ${name}`}>
+  <section className={`category ${name}`}>
     <h2 className={`category-title ${name}`}>{name}</h2>
     <div className={`row ${name}`}>
       {articles.map(article => {
@@ -20,5 +20,5 @@ export const HomeCategory = ({name, articles}) => (
         )
       })}
     </div>
-  </div>
+  </section>
 )
