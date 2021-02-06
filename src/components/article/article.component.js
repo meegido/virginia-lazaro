@@ -1,8 +1,7 @@
 import '../assets/posterize.svg'
+import './article.styles.css'
 
-import './Article.css'
-
-function Article({
+export const Article = ({
   title,
   image_url,
   publication_date,
@@ -10,7 +9,7 @@ function Article({
   media_title,
   excerpt,
   name,
-}) {
+}) => {
   const handleApplyFilter = (event) => {
     const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert', 'posterize']
     const filter = filters[Math.floor(Math.random() * filters.length)]
@@ -42,5 +41,3 @@ function Article({
     </div>
   )
 }
-
-export default Article

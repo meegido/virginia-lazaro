@@ -1,4 +1,4 @@
-@import-normalize;
+@import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700;900&display=swap');
 
 *,

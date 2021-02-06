@@ -1,10 +1,10 @@
-import Header from '../../header/Header'
+import Header from '../../header/header.component'
 import {useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
-import Article from '../../article/Article'
-import './Home.css'
+import {HomeCategory} from '../../home-category/home-category.component'
+import './home.css'
 
-function Home() {
+export const Home = () => {
   const [loaded, setStatus] = useState(false)
   const [categories, setCategories] = useState({})
 
@@ -36,29 +36,3 @@ function Home() {
     </div>
   )
 }
-
-function HomeCategory({name, articles}) {
-  return (
-    <div className={`category ${name}`}>
-      <h2 className={`category-title ${name}`}>{name}</h2>
-      <div className={`row ${name}`}>
-        {articles.map(article => {
-          return (
-            <Article
-              name={name}
-              key={article.title}
-              title={article.title}
-              image_url={article.image_url}
-              excerpt={article.excerpt}
-              publication_date={article.publication_date}
-              media_title={article.media_title}
-              media_link={article.media_link}
-            />
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-
-export default Home

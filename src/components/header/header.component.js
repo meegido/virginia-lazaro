@@ -1,5 +1,5 @@
 import {Link} from '@reach/router'
-import './Header.css'
+import './header.styles.css'
 
 const Header = () => {
   return (

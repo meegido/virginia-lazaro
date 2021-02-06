@@ -1,6 +1,5 @@
 import {Router} from '@reach/router'
-import Home from './pages/home/Home'
-import './App.css'
+import {Home} from './pages/home/home'
 
 function App() {
   return (
