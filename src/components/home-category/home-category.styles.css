@@ -31,6 +31,27 @@
   }
 }
 
-@media (min-width: 48em) {}
+@media (min-width: 48em) and (orientation: portrait) {
+  .row {
+    display: grid;
+    grid-gap: 4em;
+  }
+  
+  .row.pixels {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-@media (min-width: 90em) {}
+  .row.culture {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .row.interviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 90em) {
+  .row {
+    grid-gap: 6em;
+  }
+}

@@ -86,11 +86,42 @@
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .article:nth-child(2),
   .article:nth-child(3) {
-  border-top: 1px solid black;
-}
+    border-top: 1px solid black;
+  }
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
+  .article:nth-child(2),
+  .article:nth-child(3) {
+    border-top: 1px solid black;
+  }
+
+  .article.culture:nth-child(2) .article-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .article.culture:nth-child(2) .date {
+    margin: 0 0 0.5em 0;
+  }
+
+  .article.pixels:first-child .article-title,
+  .article.pixels:nth-child(2) .article-title {
+    text-align: left;
+  }
+  
+  .article.culture:first-child .article-title,
+  .article.culture:nth-child(2) .article-title,
+  .article.culture:nth-child(3) .article-title {
+    text-align: left;
+  }
+  
+  .article.interviews:first-child .article-title,
+  .article.interviews:nth-child(2) .article-title {
+    text-align: right;
+  }
 }
 
 @media only screen and (min-width: 64em) {

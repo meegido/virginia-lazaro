@@ -50,6 +50,12 @@ h3 {
   line-height: 1.4;
 }
 
+@media only screen and (min-width: 25em) {
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
 @media (min-width: 90em) {
   h2 {
     font-size: 1.55em;
