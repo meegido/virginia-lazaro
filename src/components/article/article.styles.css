@@ -76,11 +76,27 @@
 }
 
 .article .article-image {
-  height: 300px;
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.2em;
+}
+
+.article.pixels:first-child .article-image {
+  height: calc(18vw * 1 / 1);
+  
+}
+
+.article.pixels:nth-child(2) .article-image {
+  height: calc(24vw * 2 / 2);
+ 
+}
+
+.article.culture .article-image {
+  height: calc(14vw * 2 / 2);
+}
+
+.article.interviews .article-image {
+  height: calc(26vw * 1 / 1);
 }
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
@@ -95,6 +111,11 @@
   .article:nth-child(3) {
     border-top: 1px solid black;
   }
+
+  /* .article.pixels .article-image {
+    height: 240px;
+    background-size: contain;
+  } */
 
   .article.culture:nth-child(2) .article-info {
     display: flex;
@@ -124,16 +145,8 @@
   }
 }
 
-@media only screen and (min-width: 64em) {
-  /* .article .article-image {
-    background-size: cover;
-    border-radius: 0.3em;
-    height: 350px;
-    width: 100%;
-  } */
-}
-
 @media only screen and (min-width: 64em) and (orientation: landscape) {
+  
   .article.pixels:first-child {
     grid-column: 1 / 2;
   }
@@ -157,15 +170,10 @@
     margin-top: 0;
   }
 
-  .article.pixels:first-child .article-image {
-    height: 190px;
+  /* .article.culture:nth-child(3) .article-image {
+    height: 240px;
     background-size: contain;
-  }
-
-  .article.culture:nth-child(3) .article-image {
-    height: 170px;
-    background-size: contain;
-  }
+  } */
 
   .article.interviews:first-child .article-content {
     display: flex;
@@ -212,6 +220,9 @@
    
   }
 }
+
+
+@media only screen and (min-width: 64em) and (orientation: portrait) {}
 
 @media (min-width: 90em) {
 
