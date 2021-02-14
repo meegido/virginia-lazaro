@@ -1,0 +1,103 @@
+.main-header {
+	overflow: hidden;
+	width: 100%;
+}
+
+.name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid black;
+	border-bottom: 2px solid black;
+	.title {
+		display: inline-flex;
+		margin: 0.3em;
+	}
+	.subtitle {
+		display: none;
+	}
+}
+
+.slogan {
+	border-bottom: 1px solid black;
+	letter-spacing: 1px;
+	p {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.7rem;
+		margin: 0.5em 1em;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: center;
+	ul {
+		display: flex;
+		li {
+			padding: 0 2em;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 48em) {
+	.name {
+		.title {
+			font-size: 2em;
+		}
+		.subtitle {
+			display: flex;
+			flex-direction: column;
+			text-align: right;
+			padding: 0 2em;
+			text-transform: uppercase;
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@media (min-width: 64em) {
+	.name {
+		.title {
+			font-size: calc(1rem + ((1vw - 0.48em) * 5.7619));
+		}
+		.subtitle {
+			font-size: 1rem;
+			padding: 0 3em;
+		}
+	}
+}
+
+@media (min-width: 83em) {
+	.name {
+		.title {
+			font-size: calc(1rem + ((1vw - 0.48em) * 6.7619));
+		}
+		.subtitle {
+			font-size: 1.2rem;
+			padding: 0 3em;
+		}
+	}
+}
+
+@media (min-width: 90em) {
+	.name {
+		.title {
+			font-size: 3.2em;
+		}
+		.subtitle {
+			font-size: 0.9rem;
+			padding: 0 10em;
+		}
+	}
+	.nav {
+		ul {
+			li {
+				padding: 0 4em;
+			}
+		}
+	}
+}

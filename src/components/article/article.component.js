@@ -1,5 +1,5 @@
 import '../assets/posterize.svg'
-import './article.styles.css'
+import './article.styles.scss'
 
 export const Article = ({
   title,

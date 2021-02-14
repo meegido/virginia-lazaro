@@ -1,0 +1,245 @@
+.blur {
+  filter: blur(5px) grayscale(10%);
+}
+
+.contrast {
+  filter: brightness(90%);
+  filter: contrast(400%);
+}
+
+.saturate {
+  filter: saturate(500%);
+}
+
+.hue {
+  filter: hue-rotate(270deg);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.posterize {
+  filter: url(#posterize);
+}
+
+.article {
+  border-top: 1px solid black;
+  &:nth-child(2) {
+    border-top: none;
+  }
+  &:nth-child(3) {
+    border-top: none;
+  }
+  .article-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.2em;
+  }
+}
+.article-title {
+  height: auto;
+  margin: 0.5em 0 0.2em 0;
+}
+
+.article.pixels {
+  &:first-child {
+    .article-title {
+      text-align: left;
+    }
+    .article-image {
+      height: calc(18vw * 1 / 1);
+    }
+  }
+  &:nth-child(2) {
+    .article-title {
+      text-align: right;
+    }
+    .article-image {
+      height: calc(24vw * 2 / 2);
+    }
+  }
+}
+
+.article.culture {
+  &:first-child {
+    .article-title {
+      text-align: right;
+    }
+  }
+  &:nth-child(3) {
+    .article-title {
+      text-align: right;
+    }
+  }
+  &:nth-child(2) {
+    .article-title {
+      text-align: left;
+    }
+  }
+  .article-image {
+    height: calc(14vw * 2 / 2);
+  }
+}
+
+.article.interviews {
+  &:first-child {
+    .article-title {
+      text-align: right;
+    }
+  }
+  &:nth-child(2) {
+    .article-title {
+      text-align: left;
+    }
+  }
+  .article-image {
+    height: calc(26vw * 1 / 1);
+  }
+}
+
+.article-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  .date {
+    margin: 0.5em 0em;
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .article {
+    &:nth-child(2) {
+      border-top: 1px solid black;
+    }
+    &:nth-child(3) {
+      border-top: 1px solid black;
+    }
+  }
+}
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+  .article {
+    &:nth-child(2) {
+      border-top: 1px solid black;
+    }
+    &:nth-child(3) {
+      border-top: 1px solid black;
+    }
+  }
+  .article.culture {
+    &:nth-child(2) {
+      .article-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .date {
+        margin: 0 0 0.5em 0;
+      }
+      .article-title {
+        text-align: left;
+      }
+    }
+    &:first-child {
+      .article-title {
+        text-align: left;
+      }
+    }
+    &:nth-child(3) {
+      .article-title {
+        text-align: left;
+      }
+    }
+  }
+  .article.pixels {
+    &:first-child {
+      .article-title {
+        text-align: left;
+      }
+    }
+    &:nth-child(2) {
+      .article-title {
+        text-align: left;
+      }
+    }
+  }
+  .article.interviews {
+    &:first-child {
+      .article-title {
+        text-align: right;
+      }
+    }
+    &:nth-child(2) {
+      .article-title {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 64em) and (orientation: landscape) {
+  .article.pixels {
+    &:first-child {
+      grid-column: 1 / 2;
+    }
+    
+    &:nth-child(2) {
+      grid-column: 2 / 4;
+      .article-content {
+        display: flex;
+        flex-direction: row-reverse;
+        .image-container {
+          width: 100%;
+        }
+        .excerpt {
+          width: 70%;
+          padding-right: 1em;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  
+  .article.interviews {
+    &:first-child {
+      .article-content {
+        display: flex;
+        flex-direction: column-reverse;
+        .image-container {
+          width: 100%;
+        }
+        .excerpt {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      .article-title {
+        margin: 0.5em 5em 0.2em 0;
+        text-align: left;
+        margin: 0.5em 5em 0.2em 0;
+        text-align: left;
+      }
+    }
+    
+    &:nth-child(2) {
+      .article-content {
+        display: flex;
+        flex-direction: row-reverse;
+        .image-container {
+          width: 100%;
+        }
+        .excerpt {
+          width: 100%;
+          padding-right: 1em;
+          margin-top: 0;
+        }
+      }
+      .article-title {
+        margin: 0.5em 2em 0.2em 0;
+      }
+    }
+  }
+}

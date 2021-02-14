@@ -1,5 +1,5 @@
 import {Article} from '../article/article.component'
-import './home-category.styles.css'
+import './home-category.styles.scss'
 
 export const HomeCategory = ({name, articles}) => (
   <section className={`category ${name}`}>
