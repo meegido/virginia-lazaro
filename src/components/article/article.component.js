@@ -11,7 +11,7 @@ export const Article = ({
   name,
 }) => {
   const handleApplyFilter = (event) => {
-    const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert', 'posterize']
+    const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert']
     const filter = filters[Math.floor(Math.random() * filters.length)]
 
     event.target.className = `article-image ${filter}`
