@@ -1,6 +1,6 @@
 .category-title {
   text-transform: uppercase;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.3em;
 }
 
 .category-title.pixels {
@@ -57,12 +57,32 @@
   }
   
   .row.pixels {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .row.culture {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .row.interviews {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (min-width: 90em) {
   .row {
     grid-gap: 6em;
+  }
+
+  .row.pixels {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .row.culture {
+    grid-template-columns: repeat(14, 1fr);
+  }
+
+  .row.interviews {
+    grid-template-columns: repeat(14, 1fr);
   }
 }

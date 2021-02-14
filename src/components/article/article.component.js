@@ -23,6 +23,7 @@ export const Article = ({
       <div className="article-info">
         <a className="media" href={media_link}>{media_title}</a>
         <p className="date">{publication_date}</p>
+
       </div>
       <div className="article-content">
         <div className="image-container" onMouseEnter={handleApplyFilter}>
