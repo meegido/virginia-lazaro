@@ -6,3 +6,10 @@ export async function fetchCategories() {
 
   return await response.json()
 }
+
+export async function fetchCategory(categoryName) {
+  const path = `${ENDPOINT}/categories/${categoryName}/`
+  const response = await window.fetch(path)
+
+  return await response.json()
+}

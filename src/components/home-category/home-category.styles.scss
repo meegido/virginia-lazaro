@@ -7,6 +7,7 @@
   &.pixels {
     flex-direction: row;
   }
+  
   &.culture, &.interviews {
     flex-direction: row-reverse;
   }
@@ -21,10 +22,6 @@
     font-size: 1rem;
   }
 }
-
-
-
-
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .row {

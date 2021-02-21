@@ -1,0 +1,15 @@
+.category-container {
+  margin: 2em;
+}
+
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .category-container {
+    margin: 2em 4em;
+  }
+}
+
+@media (min-width: 90em) {
+ .category-container {
+   margin: 3em 16em;
+ }
+}

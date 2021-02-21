@@ -1,14 +1,11 @@
-import {Link} from '@reach/router'
 import {Article} from '../article/article.component'
-import './home-category.styles.scss'
+import '../article/article.styles.scss'
+import './category.styles.scss'
 
-export const HomeCategory = ({name, articles}) => (
+export const Category = ({articles, name}) => (
   <section className={`category ${name}`}>
-    <div className={`container-title ${name}`}>
-      <h2 className={`category-title`}>{name}</h2>
-      <Link to={`category/${name}`} className="category-more">Ver más</Link>
-    </div>
-    <div className={`row ${name}`}>
+    <h2 className={`category-title`}>{name}</h2>
+    <div className={`container ${name}`}>
       {articles.map(article => {
         return (
           <Article
@@ -25,4 +22,6 @@ export const HomeCategory = ({name, articles}) => (
       })}
     </div>
   </section>
+  
+  
 )
