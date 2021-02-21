@@ -1,16 +1,30 @@
-.category-title {
-  text-transform: uppercase;
-  margin-bottom: 0.3em;
+.container-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+
+  &.pixels {
+    flex-direction: row;
+  }
+  &.culture, &.interviews {
+    flex-direction: row-reverse;
+  }
+
+  .category-title {
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+  }
+
+  .category-more {
+    font-family: 'New York Extra Large Regular Italic';
+    font-size: 1rem;
+  }
 }
 
-.category-title.pixels {
-  text-align: left;
-}
 
-.category-title.culture,
-.category-title.interviews {
-  text-align: right;
-}
+
+
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .row {
@@ -35,6 +49,7 @@
   .row {
     display: grid;
     grid-gap: 4em;
+    margin-bottom: 1em;
   }
   
   .row.pixels {
@@ -54,6 +69,7 @@
   .row {
     display: grid;
     grid-gap: 4em;
+    margin-bottom: 2em;
   }
   
   .row.pixels {
@@ -72,6 +88,7 @@
 @media (min-width: 90em) {
   .row {
     grid-gap: 6em;
+    margin-bottom: 3em;
   }
 
   .row.pixels {

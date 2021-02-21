@@ -3,7 +3,10 @@ import './home-category.styles.scss'
 
 export const HomeCategory = ({name, articles}) => (
   <section className={`category ${name}`}>
-    <h2 className={`category-title ${name}`}>{name}</h2>
+    <div className={`container-title ${name}`}>
+      <h2 className={`category-title`}>{name}</h2>
+      <a href="/" className="category-more">Ver más</a>
+    </div>
     <div className={`row ${name}`}>
       {articles.map(article => {
         return (
