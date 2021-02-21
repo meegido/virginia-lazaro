@@ -22,7 +22,7 @@ export const Home = () => {
   return (
     <div className="App">
       <Header />
-      <div className="home">
+      <main className="home">
         {isLoaded && (
           <HomeCategory articles={categories.pixels} name="pixels" />
         )}
@@ -32,7 +32,7 @@ export const Home = () => {
         {isLoaded && (
           <HomeCategory articles={categories.interviews} name="interviews" />
         )}
-      </div>
+      </main>
     </div>
   )
 }
