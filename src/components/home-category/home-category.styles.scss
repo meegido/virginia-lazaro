@@ -27,18 +27,12 @@
   .row {
     display: grid;
     grid-gap: 4em;
-  }
-
-  .row.pixels {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .row.culture {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .row.interviews {
-    grid-template-columns: repeat(2, 1fr);
+    &.pixels, &.interviews {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.culture {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -47,18 +41,13 @@
     display: grid;
     grid-gap: 4em;
     margin-bottom: 1em;
-  }
+    &.pixels, &.interviews {
+      grid-template-columns: repeat(2, 1fr);
+    }
   
-  .row.pixels {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .row.culture {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .row.interviews {
-    grid-template-columns: repeat(2, 1fr);
+    &.culture {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -67,18 +56,9 @@
     display: grid;
     grid-gap: 4em;
     margin-bottom: 2em;
-  }
-  
-  .row.pixels {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .row.culture {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .row.interviews {
-    grid-template-columns: repeat(6, 1fr);
+    &.pixels, &.culture, &.interviews {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 }
 
@@ -86,17 +66,12 @@
   .row {
     grid-gap: 6em;
     margin-bottom: 3em;
-  }
-
-  .row.pixels {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .row.culture {
-    grid-template-columns: repeat(14, 1fr);
-  }
-
-  .row.interviews {
-    grid-template-columns: repeat(14, 1fr);
-  }
+    &.pixels {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  
+    &.culture, &.interviews  {
+      grid-template-columns: repeat(14, 1fr);
+    }
+  } 
 }
