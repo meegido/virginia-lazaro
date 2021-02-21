@@ -1,7 +1,7 @@
 import '../assets/posterize.svg'
-import './article.styles.scss'
+import './home-articles.styles.scss'
 
-export const Article = ({
+export const HomeArticles = ({
   title,
   image_url,
   publication_date,

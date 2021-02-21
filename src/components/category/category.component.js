@@ -1,6 +1,4 @@
-import {Article} from '../article/article.component'
-import '../article/article.styles.scss'
-import './category.styles.scss'
+import {CategoryArticles} from '../category-articles/category-articles.component'
 
 export const Category = ({articles, name}) => (
   <section className={`category ${name}`}>
@@ -8,7 +6,7 @@ export const Category = ({articles, name}) => (
     <div className={`container ${name}`}>
       {articles.map(article => {
         return (
-          <Article
+          <CategoryArticles
             name={name}
             key={article.title}
             title={article.title}

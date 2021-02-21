@@ -1,5 +1,5 @@
 import {Link} from '@reach/router'
-import {Article} from '../article/article.component'
+import {HomeArticles} from '../home-articles/home-articles.component'
 import './home-category.styles.scss'
 
 export const HomeCategory = ({name, articles}) => (
@@ -11,7 +11,7 @@ export const HomeCategory = ({name, articles}) => (
     <div className={`row ${name}`}>
       {articles.map(article => {
         return (
-          <Article
+          <HomeArticles
             name={name}
             key={article.title}
             title={article.title}
