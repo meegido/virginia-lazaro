@@ -1,0 +1,65 @@
+.blur {
+    filter: blur(5px) grayscale(10%);
+  }
+  
+  .contrast {
+    filter: brightness(90%);
+    filter: contrast(400%);
+  }
+  
+  .saturate {
+    filter: saturate(500%);
+  }
+  
+  .hue {
+    filter: hue-rotate(270deg);
+  }
+  
+  .invert {
+    filter: invert(100%);
+  }
+  
+  .posterize {
+    filter: url(#posterize);
+  }
+  
+  .category-article {
+    &:first-child {
+      border-top: 1px solid black;
+    }
+    
+    .article-title {
+      height: auto;
+      margin: .5em 0 .2em;
+    }
+    
+    .article-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .media {
+        margin: .5em 0;
+      }
+      .date {
+        font-family: 'New York Extra Large Regular Italic';
+        font-weight: 100;
+        font-size: 0.8rem;
+        text-align: left;
+      }
+    }
+   
+    .article-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0.2em;
+      padding-top: 75%;
+    }
+  }
+  
+  @media only screen and (min-width: 25em) and (orientation: landscape) {}
+  
+  @media only screen and (min-width: 48em) and (orientation: portrait) {}
+  
+  @media only screen and (min-width: 64em) and (orientation: landscape) {}
+  
+  @media only screen and (min-width: 90em) {}

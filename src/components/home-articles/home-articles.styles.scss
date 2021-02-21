@@ -23,7 +23,7 @@
   filter: url(#posterize);
 }
 
-.article {
+.home-article {
   border-top: 1px solid black;
   &:nth-child(2) {
     border-top: none;
@@ -62,7 +62,7 @@
  
 }
 
-.article.pixels {
+.home-article.pixels {
   &:first-child {
     .article-title {
       text-align: left;
@@ -76,7 +76,7 @@
   }
 }
 
-.article.culture {
+.home-article.culture {
   &:first-child {
     .article-title {
       text-align: right;
@@ -98,7 +98,7 @@
   }
 }
 
-.article.interviews {
+.home-article.interviews {
   &:first-child {
     .article-title {
       text-align: right;
@@ -114,7 +114,7 @@
 
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
-  .article {
+  .home-article {
     &:nth-child(2) {
       border-top: 1px solid black;
     }
@@ -122,7 +122,7 @@
       border-top: 1px solid black;
     }
   }
-  .article.culture {
+  .home-article.culture {
     &:first-child {
       .article-info {
         flex-direction: row;
@@ -153,7 +153,7 @@
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
-  .article {
+  .home-article {
     &:nth-child(2) {
       border-top: 1px solid black;
     }
@@ -162,7 +162,7 @@
     }
   }
 
-  .article.pixels {
+  .home-article.pixels {
     &:first-child {
       .article-title {
         text-align: left;
@@ -176,7 +176,7 @@
     }
   }
 
-  .article.culture {
+  .home-article.culture {
     &:nth-child(2) {
       .article-info {
         display: flex;
@@ -203,7 +203,7 @@
     }
   }
 
-  .article.interviews {
+  .home-article.interviews {
     &:first-child {
       .article-title {
         text-align: right;
@@ -221,7 +221,7 @@
 }
 
 @media only screen and (min-width: 64em) and (orientation: landscape) {
-  .article.pixels {
+  .home-article.pixels {
     &:first-child {
       grid-column: 1 / 3;
     }
@@ -244,7 +244,7 @@
     }
   }
 
-  .article.culture {
+  .home-article.culture {
     &:first-child {
       grid-column: 1 / 3;
     }
@@ -258,7 +258,7 @@
     }
   }
   
-  .article.interviews {
+  .home-article.interviews {
     &:first-child {
       grid-column: 1 / 4;
       .article-content {
@@ -307,7 +307,7 @@
 }
 
 @media only screen and (min-width: 90em) {
-  .article.pixels {
+  .home-article.pixels {
     &:first-child {
       grid-column: 1 / 5;
     }
@@ -324,7 +324,7 @@
     }
   }
 
-  .article.culture {
+  .home-article.culture {
     &:first-child {
       grid-column: 1 / 4;
       .article-info {
@@ -374,7 +374,7 @@
     }
   }
 
-  .article.interviews {
+  .home-article.interviews {
     &:first-child {
       grid-column: 1 / 7;
     }

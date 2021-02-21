@@ -18,7 +18,7 @@ export const CategoryArticles = ({
   }
 
   return (
-    <article className={`article ${name}`}>
+    <article className={`category-article ${name}`}>
       <h3 className="article-title">{title}</h3>
       <div className="article-info">
         <a className="media" href={media_link}>{media_title}</a>
