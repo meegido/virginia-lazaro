@@ -8,6 +8,12 @@
   }
 }
 
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+  .category-container {
+    margin: 2em 4em;
+  }
+}
+
 @media (min-width: 90em) {
  .category-container {
    margin: 3em 16em;

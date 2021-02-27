@@ -1,15 +1,21 @@
-.home {
+.home-container {
   margin: 2em;
 }
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
-  .home {
+  .home-container {
+    margin: 2em 4em;
+  }
+}
+
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+  .category-container {
     margin: 2em 4em;
   }
 }
 
 @media (min-width: 90em) {
- .home {
+ .home-container {
    margin: 3em 16em;
  }
 }

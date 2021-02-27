@@ -1,4 +1,5 @@
 import {CategoryArticles} from '../category-articles/category-articles.component'
+import './category.styles.scss'
 
 export const Category = ({articles, name}) => (
   <section className={`category ${name}`}>

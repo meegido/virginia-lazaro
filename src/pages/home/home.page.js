@@ -22,7 +22,7 @@ export const Home = () => {
   return (
     <div className="App">
       <Header />
-      <main className="home">
+      <main className="home-container">
         {isLoaded && (
           <HomeCategory articles={categories.pixels} name="pixels" />
         )}

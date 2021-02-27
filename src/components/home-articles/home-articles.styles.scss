@@ -23,6 +23,11 @@
   filter: url(#posterize);
 }
 
+@mixin info($direction, $align) {
+  flex-direction: $direction;
+  justify-content: $align;
+}
+
 .home-article {
   border-top: 1px solid black;
   &:nth-child(2) {
@@ -39,8 +44,8 @@
   
   .article-info {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include info(row, space-between);
+   
     .media {
       margin: .5em 0;
     }
@@ -131,8 +136,7 @@
     }
     &:nth-child(2) {
       .article-info {
-        flex-direction: column;
-        justify-content: space-between;
+        @include info(column, space-between);
         .media {
           margin:0;
         }
@@ -180,8 +184,7 @@
     &:nth-child(2) {
       .article-info {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include info(column, space-between);
         align-items: flex-end;
       }
       .date {
@@ -328,8 +331,7 @@
     &:first-child {
       grid-column: 1 / 4;
       .article-info {
-        flex-direction: column;
-        align-items: flex-end;
+        @include info(column, flex-end);
 
         .media {
           margin: 0;
