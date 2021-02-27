@@ -15,7 +15,7 @@ export const CategoryPage = ({categoryName}) => {
       setStatus(true)
     }
     loadCategories()
-  },[])
+  },[categoryName])
 
   const isLoaded = loaded && category
 
