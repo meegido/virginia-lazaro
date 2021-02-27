@@ -24,6 +24,7 @@
 }
 
 @mixin info($direction, $align) {
+  display: flex;
   flex-direction: $direction;
   justify-content: $align;
 }
@@ -39,7 +40,6 @@
   }
   
   .article-info {
-    display: flex;
     @include info(row, space-between);
 
     .media {
@@ -79,24 +79,49 @@
 
 @media only screen and (min-width: 64em) and (orientation: landscape) {
   .category-article {
-    &:first-child {
-     width: 83%;
-     height: 10%; 
-    }
 
-    &:nth-child(2) {
-      width: 73%; 
-      height: 100%;
-     }
+    // &:first-child {
+    //  width: 83%;
+    //  height: 10%; 
+    // }
 
-     &:nth-child(3) {
-      width: 43%; 
-      height: 100%;
-     }
+    // &:nth-child(2) {
+    //   width: 100%; 
+    //   height: 100%;
+    //  }
+
+    //  &:nth-child(3) {
+    //   width: 43%; 
+    //   height: 100%;
+    //  }
     
   }
 }
 
-@media only screen and (min-width: 90em) {}
+@media only screen and (min-width: 90em) {
+  .category-article {
+    $width: 70%, 100%, 70%, 75%, 70%, 100%, 60%, 100%;
+    $height: 16%, 50%, 60%;
+    $justify: start, end, start, end, end, end;
+    
+    @for $i from 1 through length($width) {
+      &:nth-child(#{length($width)}n+#{$i}) {
+          width: nth($width, $i)
+      }
+    }
+    @for $i from 1 through length($height) {
+      &:nth-child(#{length($height)}n+#{$i}) {
+          height: nth($height, $i)
+      }
+    }
+
+    @for $i from 1 through length($justify) {
+      &:nth-child(#{length($justify)}n+#{$i}) {
+        justify-self: nth($justify, $i)
+      }
+    }
+ 
+  }
+}
 
 //https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb
