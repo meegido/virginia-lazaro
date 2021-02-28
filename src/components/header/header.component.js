@@ -6,17 +6,17 @@ import {Context} from '../../LanguageProvider'
 export const Header = () => {
   const [state, dispatch] = useContext(Context)
   useEffect(() => {
-    sessionStorage.setItem('language', state.language)
+    localStorage.setItem('language', state.language)
   })
 
   function handleLanguage() {
     const {language} = state
     if (language === 'es') {
-      sessionStorage.setItem('language', 'en')
+      localStorage.setItem('language', 'en')
       dispatch({type: 'SET_LANGUAGE', language: 'en'})
       return
     }
-    sessionStorage.setItem('language', 'es')
+    localStorage.setItem('language', 'es')
     dispatch({type: 'SET_LANGUAGE', language: 'es'})
   }
 

@@ -2,7 +2,7 @@ import React, {createContext, useReducer} from 'react'
 import Reducer from './Reducer'
 
 const initialState = {
-  language: sessionStorage.getItem('language') || 'es',
+  language: localStorage.getItem('language') || 'es',
 }
 
 const LanguageProvider = ({children}) => {
