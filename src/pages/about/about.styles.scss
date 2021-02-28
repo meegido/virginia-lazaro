@@ -1,0 +1,49 @@
+.about-container {
+  margin: 2em;
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      width: 33.3%;
+      .avatar {
+        background-image: url('https://res.cloudinary.com/meegido/image/upload/v1614500906/virginia-profile_nakokv.png');
+        width: 300px;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 25px;
+      }
+      .contact {
+        text-align: center;
+        margin-left: 4em;
+      }
+    }
+    .profile-data {
+      width: 70%;
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .about-container {
+    margin: 2em 4em;
+  }
+}
+
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+  .about-container {
+    margin: 2em 4em;
+  }
+}
+
+@media (min-width: 90em) {
+  .about-container {
+    margin: 3em 16em;
+  }
+}
