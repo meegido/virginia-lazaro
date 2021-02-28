@@ -1,7 +1,24 @@
 import {Link} from '@reach/router'
 import './header.styles.scss'
+import {useEffect, useState} from 'react'
 
 export const Header = () => {
+  const [language, setLanguage] = useState(
+    sessionStorage.getItem('language') || 'es',
+  )
+  useEffect(() => {
+    sessionStorage.setItem('language', language)
+  })
+
+  function handleLanguage() {
+    if (sessionStorage.getItem('language') === 'es') {
+      setLanguage('en')
+      return
+    }
+
+    setLanguage('es')
+  }
+
   return (
     <header className="main-header">
       <nav className="nav">
@@ -16,7 +33,7 @@ export const Header = () => {
             <Link to="/projects">PROJECTS</Link>
           </li>
           <li>
-            <Link to="idioma">ES/EN</Link>
+            <button onClick={handleLanguage}>ES/EN</button>
           </li>
         </ul>
       </nav>
