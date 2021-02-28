@@ -15,7 +15,7 @@ export const CategoryPage = ({categoryName}) => {
       setStatus(true)
     }
     loadCategories()
-  })
+  }, [categoryName])
 
   const isLoaded = loaded && category
 
@@ -23,9 +23,7 @@ export const CategoryPage = ({categoryName}) => {
     <div className="App">
       <Header />
       <main className="category-container">
-        {isLoaded && (
-          <Category articles={category} name={`${categoryName}`} />
-        )}
+        {isLoaded && <Category articles={category} name={`${categoryName}`} />}
       </main>
     </div>
   )
