@@ -1,21 +1,24 @@
-import {useEffect, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
 import {Header} from '../../components/header/header.component'
 import {Category} from '../../components/category/category.component'
 import './category-page.styles.scss'
+import {Context} from '../../LanguageProvider'
 
 export const CategoryPage = ({categoryName}) => {
+  const [state] = useContext(Context)
   const [loaded, setStatus] = useState(false)
   const [category, setCategory] = useState({})
+  const {language} = state
 
   useEffect(() => {
     const loadCategories = async () => {
-      const category = await ApiClient.fetchCategory(categoryName)
+      const category = await ApiClient.fetchCategory(categoryName, language)
       setCategory(category)
       setStatus(true)
     }
     loadCategories()
-  }, [categoryName])
+  }, [categoryName, language])
 
   const isLoaded = loaded && category
 

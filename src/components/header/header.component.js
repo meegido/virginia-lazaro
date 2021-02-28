@@ -1,22 +1,23 @@
 import {Link} from '@reach/router'
 import './header.styles.scss'
-import {useEffect, useState} from 'react'
+import {useContext, useEffect} from 'react'
+import {Context} from '../../LanguageProvider'
 
 export const Header = () => {
-  const [language, setLanguage] = useState(
-    sessionStorage.getItem('language') || 'es',
-  )
+  const [state, dispatch] = useContext(Context)
   useEffect(() => {
-    sessionStorage.setItem('language', language)
+    sessionStorage.setItem('language', state.language)
   })
 
   function handleLanguage() {
-    if (sessionStorage.getItem('language') === 'es') {
-      setLanguage('en')
+    const {language} = state
+    if (language === 'es') {
+      sessionStorage.setItem('language', 'en')
+      dispatch({type: 'SET_LANGUAGE', language: 'en'})
       return
     }
-
-    setLanguage('es')
+    sessionStorage.setItem('language', 'es')
+    dispatch({type: 'SET_LANGUAGE', language: 'es'})
   }
 
   return (
