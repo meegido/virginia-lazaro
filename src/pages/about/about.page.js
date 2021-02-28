@@ -1,8 +1,13 @@
 import {Header} from '../../components/header/header.component'
-import "./about.styles.scss"
-
+import './about.styles.scss'
+import {useContext} from 'react'
+import {Context} from '../../LanguageProvider'
+import {content} from './content'
 
 export const About = () => {
+  const [state] = useContext(Context)
+  const {language} = state
+
   return (
     <div className="about">
       <Header />
@@ -14,16 +19,16 @@ export const About = () => {
             <p className="contact">hi@virginialazaro.com</p>
           </div>
           <div className="profile-data">
-            <h2 className="metier">Digital image analyst</h2>
+            <h2 className="metier">{content[language].metier}</h2>
           </div>
         </section>
         <section className="profile-description">
-          <p>Relaciono las problemáticas específicas derivadas de la tecnología digital, el neoliberalismo, la globalización y las imágenes simbólicas. Esta trayectoria crítica, me mantiene en un enfoque constante sobre el impacto de la tecnología digital en los modos de vida y la definición de los sujetos.</p>
+          <p>{content[language].description.about}</p>
           <div>
-            <h3>Curriculum biography</h3>
-            <p>Soy licenciada en Bellas Artes por la Universidad Complutense de Madrid, donde obtuve la beca de colaboración con el Departamento de Estética e Historia del Arte, y después cursé el Máster en Culturas Visuales e Historia del Arte Contemporáneo en el Museo Reina Sofía.</p>
+            <h3>{content[language].description.curriculumTitle}</h3>
+            <p>{content[language].description.curriculumText}</p>
           </div>
-        </section >
+        </section>
         <section className="tips"></section>
       </main>
     </div>
