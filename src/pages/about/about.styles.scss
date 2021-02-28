@@ -1,8 +1,9 @@
 .about-container {
   margin: 2em;
-
+  display: flex;
+  flex-direction: column;
   .profile-container {
-    display: flex;
+    display: inherit;
     flex-direction: row;
 
     .profile {
@@ -19,11 +20,12 @@
       }
       .contact {
         text-align: center;
-        margin-left: 4em;
+        margin-left: 2em;
       }
     }
     .profile-data {
       width: 70%;
+      text-align: right;
     }
   }
 }
@@ -33,17 +35,60 @@
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .about-container {
     margin: 2em 4em;
+    flex-direction: row;
+
+    .profile-container {
+      .profile-data {
+        width: 53%;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .about-container {
     margin: 2em 4em;
+    flex-direction: row;
+
+    .profile-container {
+      width: 52%;
+      .profile {
+        width: 26%;
+        .avatar {
+          width: 280px;
+        }
+      }
+      .profile-data {
+        width: 53%;
+      }
+    }
+
+    .profile-description {
+      padding-left: 1em;
+    }
+    
   }
 }
 
 @media (min-width: 90em) {
   .about-container {
     margin: 3em 16em;
+    .profile-container {
+      width: 100%;
+      .profile {
+        width: 40%;
+        .avatar {
+          width: 380px;
+          height: 420px
+        }
+      }
+
+      .profile-data {
+        width: 38%;
+      }
+    }
+    .profile-description {
+      width: 100%;
+    }
   }
 }
