@@ -1,0 +1,26 @@
+.nav {
+  overflow: hidden;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	ul {
+		display: flex;
+		li {
+			padding: 0 2em;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 90em) {
+  .nav {
+		ul {
+			li {
+				padding: 0 4em;
+			}
+		}
+	}
+}

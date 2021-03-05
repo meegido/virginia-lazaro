@@ -2,6 +2,7 @@
 import {Link} from '@reach/router'
 import {useContext, useEffect} from 'react'
 import {Context} from '../../../LanguageProvider'
+import './nav-bar.styles.scss'
 
 const NavBarComponent = () => {  
   const [state, dispatch] = useContext(Context)
@@ -19,10 +20,20 @@ const NavBarComponent = () => {
     localStorage.setItem('language', 'es')
     dispatch({type: 'SET_LANGUAGE', language: 'es'})
   }
+  
+  const toggleNav = (event) => {
+    console.log("hola")
+  }
 
   return (
     <>
-    <nav className="nav">
+      <nav className="nav" >
+       <div onClick={toggleNav}>
+         <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+       </div>
         <ul>
           <li>
             <Link to="/about">ABOUT</Link>
