@@ -23,19 +23,19 @@ const NavBarComponent = () => {
     dispatch({type: 'SET_LANGUAGE', language: 'es'})
   }
   
-  const toggleNav = (event) => {
+  const toggleNav = () => {
     setOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (
     <div className="nav-wrapper">
       <nav className={`nav ${isOpen ? "open" : ""}`}>
-       <div>
-         <input type="checkbox" onClick={toggleNav} />
-          <span></span>
-          <span></span>
-          <span></span>
+       <div className="burguer-wrapper">
+          <button onClick={toggleNav} className="burguer">
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+        </button>
        </div>
         <ul className={`nav-list ${isOpen ? "open" : ""}`}>
           <li>
