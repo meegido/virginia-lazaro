@@ -1,11 +1,13 @@
 
 import {Link} from '@reach/router'
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import {Context} from '../../../LanguageProvider'
 import './nav-bar.styles.scss'
 
 const NavBarComponent = () => {  
   const [state, dispatch] = useContext(Context)
+  const [isOpen, setOpen] = useState(false)
+  
   useEffect(() => {
     localStorage.setItem('language', state.language)
   })
@@ -22,19 +24,20 @@ const NavBarComponent = () => {
   }
   
   const toggleNav = (event) => {
-    console.log("hola")
+    setOpen(!isOpen)
+    console.log(isOpen)
   }
 
   return (
-    <>
-      <nav className="nav" >
-       <div onClick={toggleNav}>
-         <input type="checkbox" />
+    <div className="nav-wrapper">
+      <nav className={`nav ${isOpen ? "open" : ""}`}>
+       <div>
+         <input type="checkbox" onClick={toggleNav} />
           <span></span>
           <span></span>
           <span></span>
        </div>
-        <ul>
+        <ul className={`nav-list ${isOpen ? "open" : ""}`}>
           <li>
             <Link to="/about">ABOUT</Link>
           </li>
@@ -49,7 +52,7 @@ const NavBarComponent = () => {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   )
 }
 
