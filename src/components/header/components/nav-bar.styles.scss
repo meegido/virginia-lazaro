@@ -1,6 +1,5 @@
 .nav {
 	display: flex;
-	flex-direction: row;
 	position: absolute;
 	width: 100vw;
 	height: 100%;
@@ -82,14 +81,110 @@
 	}
 }
 
-@media (min-width: 90em) {
-  .nav {
-		ul {
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+	.nav {
+		width: 100vw;
+		height: 100%;
+		max-height: 1vh;
+		.burguer-wrapper {
+			.burguer {
+				top: 4.5%;
+				left: 3rem;
+			}
+		}
+		.nav-list {
 			li {
-				padding: 0 4em;
+				padding: 0.2em 8em;
+				font-size: 2em;
+
 				&:first-child {
-					padding-left: 0;
+					padding-top: .9em;
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 48em) and (orientation: portrait) {
+	.nav {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		.burguer-wrapper {
+			.burguer {
+				display: none;
+			}
+		}
+		.nav-list {
+			transform: unset;
+			display: flex;
+			flex-direction: row;
+			padding-left: 0;
+			position: relative;
+			left: auto;
+			top: auto;
+			height: auto;
+
+			li {
+				padding: 0.4em 4em;
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 64em) and (orientation: landscape) {
+	.nav {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		position: relative;
+		.burguer-wrapper {
+			.burguer {
+				display: none;
+			}
+		}
+		.nav-list {
+			transform: unset;
+			display: flex;
+			flex-direction: row;
+			padding-left: 0;
+			position: relative;
+			left: auto;
+			top: auto;
+			height: auto;
+
+			li {
+				padding: 0.4em 4em;
+				font-size: 1em;
+			}
+		}
+	}
+} 
+
+@media (min-width: 90em) {
+	.nav {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		.burguer-wrapper {
+			.burguer {
+				display: none;
+			}
+		}
+		.nav-list {
+			transform: unset;
+			display: flex;
+			flex-direction: row;
+			padding-left: 0;
+			position: relative;
+			left: auto;
+			top: auto;
+			height: auto;
+
+			li {
+				padding: 0.4em 4em;
+				font-size: 1em;
 			}
 		}
 	}
