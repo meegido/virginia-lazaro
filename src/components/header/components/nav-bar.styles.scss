@@ -66,6 +66,10 @@
 		li {
 			padding: 0.4em 4em;
 			font-size: 3em;
+
+			a {
+				text-transform: uppercase;
+			}
 		}
 
 		&.open {

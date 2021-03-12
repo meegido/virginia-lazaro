@@ -3,10 +3,12 @@ import {Link} from '@reach/router'
 import {useContext, useEffect, useState} from 'react'
 import {Context} from '../../../LanguageProvider'
 import './nav-bar.styles.scss'
+import {navBarConent} from './nav-bar-content'
 
 const NavBarComponent = () => {  
   const [state, dispatch] = useContext(Context)
   const [isOpen, setOpen] = useState(false)
+  const {language} = state;
   
   
   useEffect(() => {
@@ -40,13 +42,13 @@ const NavBarComponent = () => {
        </div>
         <ul className={`nav-list ${isOpen ? "open" : ""}`}>
           <li>
-            <Link to="/about">ABOUT</Link>
+            <Link to="/about">{navBarConent[language].about}</Link>
           </li>
           <li>
-            <Link to="/articles">ARTICLES</Link>
+            <Link to="/articles">{navBarConent[language].articles}</Link>
           </li>
           <li>
-            <Link to="/projects">PROJECTS</Link>
+            <Link to="/projects">{navBarConent[language].projects}</Link>
           </li>
           <li>
             <button onClick={handleLanguage}>ES/EN</button>
