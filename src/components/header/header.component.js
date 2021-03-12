@@ -16,7 +16,6 @@ export const Header = () => {
         <div className="subtitle">
           <p className="roles">
             <span>{headerContent[language].role.critique}</span>
-            <span>{headerContent[language].role.cultural}</span>
           </p>
           
         </div>
@@ -26,7 +25,6 @@ export const Header = () => {
         <div className="subtitle">
           <p className="roles">
             <span>{headerContent[language].role.researcher}</span>
-            <span>{headerContent[language].role.independent}</span>
           </p>
         </div>
       </div>
