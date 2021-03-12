@@ -21,6 +21,4 @@ export const Category = ({articles, name}) => (
       })}
     </div>
   </section>
-  
-  
 )

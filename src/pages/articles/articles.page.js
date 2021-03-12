@@ -1,8 +1,36 @@
+import {useContext, useEffect, useState} from 'react'
+import * as ApiClient from '../../client/ApiClient'
+import {Context} from '../../LanguageProvider'
 import {Header} from '../../components/header/header.component'
+import {ArticlesComponent} from '../../components/articles/articles.component'
 import './articles.styles.scss'
 
 export const Articles = () => {
+  const [state] = useContext(Context)
+  const [loaded, setStatus] = useState(false)
+  const [articles, setArticles] = useState(false)
+  const {language} = state
+
+  useEffect(() => {
+    const loadArticles = async () => {
+      const articles = await ApiClient.fetchArticles(language)
+      setArticles(articles)
+      setStatus(true)
+    }
+    loadArticles()
+  }, [language])
+
+  const isLoaded = loaded && articles
+
   return (
-    <Header />
+    <div className="App">
+      <Header />
+      <main className="articles-container">
+        {isLoaded && 
+        <div articles={articles}>
+         <ArticlesComponent articles={articles} />
+        </div>}
+      </main>
+    </div>
   )
 }

@@ -21,3 +21,15 @@ export async function fetchCategory(categoryName, language) {
 
   return await response.json()
 }
+
+export async function fetchArticles(language) {
+  const path = `${ENDPOINT}/articles`
+
+  const response = await window.fetch(path, {
+    headers: {
+      'X-Language': language,
+    },
+  })
+
+  return await response.json()
+}

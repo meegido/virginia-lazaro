@@ -1,4 +1,3 @@
-import '../assets/posterize.svg'
 import './category-articles.styles.scss'
 
 export const CategoryArticles = ({
