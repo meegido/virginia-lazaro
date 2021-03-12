@@ -179,10 +179,12 @@
 			transform: unset;
 			display: flex;
 			flex-direction: row;
+			justify-content: center;
+			align-items: center;
 			padding-left: 0;
-			position: relative;
-			left: auto;
-			top: auto;
+			position: static;
+			left: 0;
+			top: 0;
 			height: auto;
 
 			li {
