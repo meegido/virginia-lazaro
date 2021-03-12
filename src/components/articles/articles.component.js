@@ -1,5 +1,4 @@
 
-
 export const ArticlesComponent = ({articles}) => {
   const handleApplyFilter = (event) => {
     const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert']
@@ -13,6 +12,7 @@ export const ArticlesComponent = ({articles}) => {
       {articles.map(article => {
         return (
           <article key={article.title}>
+            <h2>{article.category}</h2>
             <h3 className="article-title">{article.title}</h3>
             <div className="article-info">
               <a className="media" href={article.media_link}>{article.media_title}</a>

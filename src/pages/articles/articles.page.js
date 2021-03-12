@@ -27,7 +27,7 @@ export const Articles = () => {
       <Header />
       <main className="articles-container">
         {isLoaded && 
-        <div articles={articles}>
+        <div>
          <ArticlesComponent articles={articles} />
         </div>}
       </main>
