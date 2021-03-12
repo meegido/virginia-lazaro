@@ -8,6 +8,7 @@ const NavBarComponent = () => {
   const [state, dispatch] = useContext(Context)
   const [isOpen, setOpen] = useState(false)
   
+  
   useEffect(() => {
     localStorage.setItem('language', state.language)
   })
