@@ -9,10 +9,8 @@ export const headerContent = {
   },
   en: {
     role: {
-      critique: 'critique',
-      cultural: 'Cultural',
-      researcher: 'researcher',
-      independent: 'Independent',
+      critique: 'Cultural critique',
+      researcher: 'Independent researcher',
     },
     brandName: "VIRGINIA LÁZARO",
     slogan: "Mapping the cultural landscape from the perspective of digital issues"
