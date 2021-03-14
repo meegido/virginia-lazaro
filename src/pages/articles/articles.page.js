@@ -3,7 +3,7 @@ import * as ApiClient from '../../client/ApiClient'
 import {Context} from '../../LanguageProvider'
 import {Header} from '../../components/header/header.component'
 import {ArticlesComponent} from '../../components/articles/articles.component'
-import './articles.styles.scss'
+import './articles-page.styles.scss'
 
 export const Articles = () => {
   const [state] = useContext(Context)

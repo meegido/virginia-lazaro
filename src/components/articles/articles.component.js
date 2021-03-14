@@ -1,3 +1,5 @@
+import './articles.styles.scss'
+
 
 export const ArticlesComponent = ({articles}) => {
   const handleApplyFilter = (event) => {
@@ -8,14 +10,16 @@ export const ArticlesComponent = ({articles}) => {
   }
 
   return (
-    <div>
+    <div className="articles">
       {articles.map(article => {
         return (
-          <article key={article.title}>
-            <h2>{article.category}</h2>
-            <h3 className="article-title">{article.title}</h3>
-            <div className="article-info">
+          <article key={article.title} className="article">
+            <div className="article-header">
+              <h2 className="article-category">{article.category}</h2>
               <a className="media" href={article.media_link}>{article.media_title}</a>
+            </div>
+            <div className="article-title">
+              <h3 className="title">{article.title}</h3>
               <p className="date">{article.publication_date}</p>
             </div>
             <div className="article-content">
