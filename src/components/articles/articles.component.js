@@ -22,7 +22,7 @@ export const ArticlesComponent = ({articles}) => {
               <h3 className="title">{article.title}</h3>
               <p className="date">{article.publication_date}</p>
             </div>
-            <div className={`article-content content-${index}`}>
+            <div className="article-content">
               <div className="image-container" onMouseEnter={handleApplyFilter}>
                 <div
                   className="article-image"
