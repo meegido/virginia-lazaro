@@ -11,7 +11,7 @@ export const ArticlesComponent = ({articles}) => {
 
   return (
     <div className="articles">
-      {articles.map(article => {
+      {articles.map((article, index) => {
         return (
           <article key={article.title} className="article">
             <div className="article-header">
@@ -22,7 +22,7 @@ export const ArticlesComponent = ({articles}) => {
               <h3 className="title">{article.title}</h3>
               <p className="date">{article.publication_date}</p>
             </div>
-            <div className="article-content">
+            <div className={`article-content content-${index}`}>
               <div className="image-container" onMouseEnter={handleApplyFilter}>
                 <div
                   className="article-image"
