@@ -5,18 +5,24 @@
   .profile-container {
     display: inherit;
     flex-direction: row;
-
+    background-color: #0077b652;
+    border-radius: 25px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: -8px 0px 32px rgba(31, 45, 39, 1);
     .profile {
       display: flex;
       flex-direction: column;
       width: 33.3%;
+  
       .avatar {
         background-image: url('https://res.cloudinary.com/meegido/image/upload/v1614500906/virginia-profile_nakokv.png');
-        width: 300px;
-        height: 400px;
+        width: 260px;
+        height: 320px;
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 25px;
+        
       }
       .contact {
         text-align: center;
@@ -26,20 +32,38 @@
     .profile-data {
       width: 70%;
       text-align: right;
+      .metier {
+        filter: drop-shadow(1px 2px 4px #0077b652);
+      }
     }
+  }
+  .profile-description {
+    .metier-description {
+      margin-bottom: 3em;
+    }
+
+    .curriculum-description {
+      .curriculum-description-title {
+        margin-bottom: 0.5em;
+      }
+     
+      .curriculum-description-text {
+        margin-top: 0;
+      }
+    }
+    
   }
 }
 
-
-
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .about-container {
-    margin: 2em 4em;
+    margin: 3em 3em 3em 4em;
     flex-direction: row;
-
     .profile-container {
+      margin-right: 3em;
+      height: 50%;
       .profile-data {
-        width: 53%;
+        width: 61%;
       }
     }
   }
@@ -47,19 +71,21 @@
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .about-container {
-    margin: 2em 4em;
+    margin: 3em 4em;
     flex-direction: row;
 
     .profile-container {
+      margin-right: 3em;
       width: 52%;
+      height: 50%;
       .profile {
         width: 26%;
         .avatar {
-          width: 280px;
+          width: 220px;
         }
       }
       .profile-data {
-        width: 53%;
+        width: 80%;
       }
     }
 
@@ -74,21 +100,22 @@
   .about-container {
     margin: 4em 16em;
     .profile-container {
-      width: 100%;
+      width: 80%;
       .profile {
-        width: 40%;
+        width: 52%;
         .avatar {
-          width: 380px;
-          height: 420px
+          width: 306px;
+          height: 356px;
         }
       }
 
       .profile-data {
-        width: 38%;
+        width: 36%;
       }
     }
     .profile-description {
       width: 100%;
+      padding-right: 2em;
     }
   }
 }

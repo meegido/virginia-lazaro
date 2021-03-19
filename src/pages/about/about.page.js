@@ -23,10 +23,10 @@ export const About = () => {
           </div>
         </section>
         <section className="profile-description">
-          <p>{content[language].description.about}</p>
-          <div>
-            <h3>{content[language].description.curriculumTitle}</h3>
-            <p>{content[language].description.curriculumText}</p>
+          <p className="metier-description">{content[language].description.about}</p>
+          <div className="curriculum-description">
+            <h3 className="curriculum-description-title">{content[language].description.curriculumTitle}</h3>
+            <p className="curriculum-description-text">{content[language].description.curriculumText}</p>
           </div>
         </section>
         <section className="tips"></section>
