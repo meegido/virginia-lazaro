@@ -30,7 +30,7 @@ export const Header = () => {
       <div class="main-nav">
         <NavBarComponent />
         <div class="language" onClick={handleLanguage}>
-          <p class="lenguage-text">ES/EN</p>
+          <p class="lenguage-text">{headerContent[language].language}</p>
         </div>
       </div>
       <div className="header">

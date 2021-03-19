@@ -5,7 +5,8 @@ export const headerContent = {
       researcher: 'Investigadora independiente',
     },
     brandName: "VIRGINIA LÁZARO",
-    slogan: "Mapeo del panorama cultural desde las problemáticas de lo digital"
+    slogan: "Mapeo del panorama cultural desde las problemáticas de lo digital",
+    language: "ES"
   },
   en: {
     role: {
@@ -13,6 +14,7 @@ export const headerContent = {
       researcher: 'Independent researcher',
     },
     brandName: "VIRGINIA LÁZARO",
-    slogan: "Mapping the cultural landscape from the perspective of digital issues"
+    slogan: "Mapping the cultural landscape from the perspective of digital issues",
+    language: "EN"
   }
 }
