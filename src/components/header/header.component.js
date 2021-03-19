@@ -27,8 +27,12 @@ export const Header = () => {
 
   return (
     <header className="main-header">
-      <NavBarComponent />
-      <button onClick={handleLanguage}>ES/EN</button>
+      <div class="main-nav">
+        <NavBarComponent />
+        <div class="language" onClick={handleLanguage}>
+          <p class="lenguage-text">ES/EN</p>
+        </div>
+      </div>
       <div className="header">
         <div className="subtitle">
           <p className="roles">
