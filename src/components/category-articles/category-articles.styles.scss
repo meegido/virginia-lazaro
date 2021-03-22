@@ -123,14 +123,20 @@
   }
 
   .category-article:first-child {
+    .article-title {
+      margin-bottom: 0;
+    }
     .article-info {
       justify-content: start;
       .media {
         margin: .6em 0;
-        width: 52%;
+        width: 70%;
+        text-align: right;
       }
       .date {
-        width: 40%;
+        width: 30%;
+        text-align: right;
+        margin-left: 2em;
       }
     }
     .article-content {
@@ -173,14 +179,22 @@
   
   .category-article {
     @include each(4) {
+      .article-title {
+        margin-bottom: 0;
+        width: 70%
+      }
+      
       .article-info {
         justify-content: start;
         .media {
           margin: .6em 0;
-          width: 51%;
+          width: 60%;
+          text-align: right;
         }
         .date {
           width: 40%;
+          text-align: right;
+          margin-left: 1em;
         }
       }
       .article-content {
