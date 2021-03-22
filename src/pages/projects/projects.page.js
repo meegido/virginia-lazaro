@@ -22,7 +22,7 @@ export const Projects = () => {
                 </div>
                 <div className="collaboration">
                   <h3>Colaboraciones artísticas</h3>
-                  <p>El Niño de Elche, Toni Quiroga, MAtias Uris, Federico Guardabrazo o Canoa, además de Carlos Gárate y yo misma.</p>
+                  <p>El Niño de Elche, Toni Quiroga, Matias Uris, Federico Guardabrazo o Canoa, además de Carlos Gárate y yo misma.</p>
                 </div>
               </div>
             </div>

@@ -236,96 +236,66 @@
   }
 }
 
+@media only screen and (min-width: 64em) and (orientation: portrait) {
+  .projects-container {
+    .espanlol {
+      .header {
+        .project-header {
+          height: 600px;
+        }
+      }
+      .chapters-container {
+        .chapters {
+          grid-template-columns: repeat(3, 1fr);
+          .cover {
+            height: 430px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 83em) and (orientation: landscape) {
+  .projects-container {
+    .espanlol {
+      .header {
+        .project-header {
+          height: 780px;
+        }
+      }
+      .chapters-container {
+        .chapters {
+          grid-gap: 2em;
+          .cover {
+            height: 575px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 90em) {
  .projects-container {
    margin: 4em 16em;
-   .header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    .project-header {
-      grid-column: 1 / 1;
-      background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616408517/portada_xyklpy.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: .3;
-      height: 766px;
-    }
-    .description {
-      grid-column: 2 / 2;
-      padding-left: 3em;
-      .explanation {
-        display: flex;
-        flex-direction: column;
-        h3 {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-        p {
-          margin-top: 0.2em;
-        }
+   .espanlol {
+    .header {
+      .project-header {
+        height: 766px;
       }
-      .tags {
-        display: flex;
-        flex: 2;
-        flex-direction: column;
-        h3 {
-          margin-bottom: 0;
-        }
-        p {
-          margin-top: 0.2em;
+    }
+    .chapters-container {
+      .chapters-header {
+        font-size: 2em;
+      }
+      .chapters {
+        grid-gap: 2em;
+        .cover {
+          height: 606px;
         }
       }
     }
-  }
-  .chapters-container {
-    .chapters-header {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-content: center;
-      text-align: center;
-      font-size: 2em;
-      margin-top: 2em;
-    }
-    .chapters {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      place-items: center;
-      grid-gap: 2em;
-      .cover {
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 556px;
-        width: 100%;
-          &.chapter-1 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-1_clnbqg.jpg);
-          }
-          &.chapter-2 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-2_rh0ane.jpg);
-          }
-          &.chapter-3 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-3_wtj4cb.jpg);
-          }
-          &.chapter-4 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-4_ujox31.jpg);
-          }
-          &.chapter-5 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-5_gnlq5m.jpg);
-          }
-          &.chapter-6 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410515/capitulo-6_nbmcip.jpg);
-          }
-          &.chapter-7 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410516/capitulo-7_auvgzb.jpg);
-          }
-          &.chapter-8 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410516/capitulo-8_hmeoyw.jpg);
-          }
-          &.chapter-9 {
-            background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616410516/capitulo-9_ck75ci.jpg);
-          }
-      }
-    }
-  }
+   }
  }
 }
