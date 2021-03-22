@@ -11,13 +11,14 @@ export const Projects = () => {
             <div className="project-header"></div>
             <div className="description">
               <div className="explanation">
+                <h3>Descripción</h3>
                 <p>Ensayo consecuencia de la investigación teórica del proyecto Españlol, primer disco de Carlos Gárate. </p>
                 <p>Españlol propone pensar sobre la identidad española a través de una mirada descreída, nacida en la ironía. Invoca imágenes de la españolidad que habitan en nuestra mente. Revisa nuestra propia identidad desde lugares tan comunes como la gastronomía, la naturaleza, canciones populares o el imaginario de Francisco de Goya. </p>
               </div>
               <div className="tags">
                 <div className="theory">
                   <h3>Base teórica</h3>
-                  <p>compositores como Enrique Granados, Claude Debussy o Erik Satie y reflexiones de Saidiya Hartman, Ariella Aisha Azoulay o George Orwel entre otros. </p>
+                  <p>Compositores como Enrique Granados, Claude Debussy o Erik Satie y reflexiones de Saidiya Hartman, Ariella Aisha Azoulay o George Orwel entre otros. </p>
                 </div>
                 <div className="collaboration">
                   <h3>Colaboraciones artísticas</h3>
