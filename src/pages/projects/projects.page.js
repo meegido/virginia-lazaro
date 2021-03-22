@@ -28,7 +28,7 @@ export const Projects = () => {
             </div>
           </div>
           <div className="chapters-container">
-            <h3 className="chapters-header">Para construír el futuro, hay que reconstruír el pasado</h3>
+            <h3 className="chapters-header">Índice</h3>
             <div className="chapters">
               <div className="cover chapter-1"></div>
               <div className="cover chapter-2"></div>

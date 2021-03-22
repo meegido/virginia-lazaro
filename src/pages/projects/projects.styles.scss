@@ -42,12 +42,10 @@
   .chapters-container {
     .chapters-header {
       display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-content: center;
-      text-align: center;
-      font-size: 1.5em;
+      align-content: flex-start;
       margin-top: 2em;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
     }
     .chapters {
       display: grid;
@@ -286,9 +284,6 @@
       }
     }
     .chapters-container {
-      .chapters-header {
-        font-size: 2em;
-      }
       .chapters {
         grid-gap: 2em;
         .cover {
