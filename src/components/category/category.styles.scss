@@ -29,11 +29,22 @@
 @media only screen and (min-width: 64em) and (orientation: landscape) {
   .container {
     display: grid;
-    grid-gap: 4em;
+    grid-gap: 2em;
     margin-bottom: 2em;
     &.pixels, &.culture, &.interviews {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(auto, 1fr));
+      grid-auto-columns: minmax(auto-fill, auto);
+      grid-auto-flow: row dense;
+    }
+  }
+}
+
+@media (min-width: 83em) and (orientation: landscape) {
+  .container {
+    grid-gap: 2em;
+    &.pixels, &.culture, &.interviews {
+      grid-template-columns: repeat(3, minmax(auto, 1fr));
+      grid-template-rows: minmax(3, minmax(auto, 1fr));
       grid-auto-columns: minmax(auto-fill, auto);
       grid-auto-rows: max-content;
       grid-auto-flow: row dense;
@@ -44,7 +55,6 @@
 @media (min-width: 90em) {
   .container {
     grid-gap: 4em;
-    margin-bottom: 3em;
     &.pixels, &.culture, &.interviews {
       grid-template-columns: repeat(2, minmax(auto, 1fr));
       grid-template-rows: minmax(3, minmax(auto, 1fr));

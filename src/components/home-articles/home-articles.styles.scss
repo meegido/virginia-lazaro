@@ -63,8 +63,6 @@
     border-radius: 0.2em;
     padding-top: 75%;
   }
-
- 
 }
 
 .home-article.pixels {
@@ -227,6 +225,13 @@
   .home-article.pixels {
     &:first-child {
       grid-column: 1 / 3;
+      .article-content {
+        .image-container {
+          .article-image {
+           padding-top: 120%;
+          }
+        }
+      }
     }
 
     &:nth-child(2) {
