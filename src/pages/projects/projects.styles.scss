@@ -157,6 +157,82 @@
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .projects-container {
     margin: 2em 4em;
+    .espanlol {
+      .header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .project-header {
+          grid-column: 1 / 1;
+          background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616408517/portada_xyklpy.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          opacity: .3;
+          height: 460px;
+        }
+
+        .description {
+          grid-column: 2 / 2;
+          padding-left: 2em;
+          .explanation {
+            display: flex;
+            flex-direction: column;
+            h3 {
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+            p {
+              margin-top: 0.2em;
+            }
+          }
+          .tags {
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            h3 {
+              margin-bottom: 0;
+            }
+            p {
+              margin-top: 0.2em;
+            }
+          }
+        }
+      }
+
+      .chapters-container {
+        .chapters {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          place-items: center;
+          grid-gap: 1em;
+          .cover {
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 300px;
+            width: 100%;
+          }
+        }
+      } 
+    }
+  }
+}
+
+@media only screen and (min-width: 64em) and (orientation: landscape) {
+  .projects-container {
+    .espanlol {
+      .header {
+        .project-header {
+          height: 600px;
+        }
+      }
+      .chapters-container {
+        .chapters {
+          grid-template-columns: repeat(3, 1fr);
+          .cover {
+            height: 430px;
+          }
+        }
+      }
+    }
   }
 }
 
