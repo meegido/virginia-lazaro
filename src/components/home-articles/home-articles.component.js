@@ -1,3 +1,4 @@
+import {useRef} from 'react'
 import '../assets/posterize.svg'
 import './home-articles.styles.scss'
 
@@ -10,11 +11,12 @@ export const HomeArticles = ({
   excerpt,
   name,
 }) => {
-  const handleApplyFilter = (event) => {
+  const imageRef = useRef(null)
+  
+  const handleApplyFilter = () => {
     const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert']
     const filter = filters[Math.floor(Math.random() * filters.length)]
-
-    event.target.className = `article-image ${filter}`
+    imageRef.current.className = `article-image ${filter}`
   }
 
   return (
@@ -28,6 +30,7 @@ export const HomeArticles = ({
       <div className="article-content">
         <div className="image-container" onMouseEnter={handleApplyFilter}>
           <div
+            ref={imageRef}
             className="article-image"
             style={{
               backgroundImage: 'url(' + image_url + ')',

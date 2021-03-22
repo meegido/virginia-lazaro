@@ -1,3 +1,4 @@
+import {useRef} from 'react'
 import './category-articles.styles.scss'
 
 export const CategoryArticles = ({
@@ -9,11 +10,12 @@ export const CategoryArticles = ({
   excerpt,
   name,
 }) => {
-  const handleApplyFilter = (event) => {
+  const imageRef = useRef(null)
+  
+  const handleApplyFilter = () => {
     const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert']
     const filter = filters[Math.floor(Math.random() * filters.length)]
-
-    event.target.className = `article-image ${filter}`
+    imageRef.current.className = `article-image ${filter}`
   }
 
   return (
@@ -26,6 +28,7 @@ export const CategoryArticles = ({
       <div className="article-content">
         <div className="image-container" onMouseEnter={handleApplyFilter}>
           <div
+            ref={imageRef}
             className="article-image"
             style={{
               backgroundImage: 'url(' + image_url + ')',

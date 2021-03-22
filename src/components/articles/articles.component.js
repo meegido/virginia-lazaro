@@ -1,17 +1,19 @@
+import {useRef} from 'react'
 import './articles.styles.scss'
 
 
 export const ArticlesComponent = ({articles}) => {
-  const handleApplyFilter = (event) => {
+  const imageRef = useRef(null)
+  
+  const handleApplyFilter = () => {
     const filters = ['contrast', 'blur', 'saturate', 'hue', 'invert']
     const filter = filters[Math.floor(Math.random() * filters.length)]
-
-    event.target.className = `article-image ${filter}`
+    imageRef.current.className = `article-image ${filter}`
   }
 
   return (
     <div className="articles">
-      {articles.map((article, index) => {
+      {articles.map(article => {
         return (
           <article key={article.title} className="article">
             <div className="article-header">
@@ -26,6 +28,7 @@ export const ArticlesComponent = ({articles}) => {
               <div className="image-container" onMouseEnter={handleApplyFilter}>
                 <div
                   className="article-image"
+                  ref={imageRef}
                   style={{
                     backgroundImage: 'url(' + article.image_url + ')',
                   }}
