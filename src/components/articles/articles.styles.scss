@@ -41,6 +41,10 @@
 
     .article-category {
       margin: .2em 0;
+      &:hover {
+        text-decoration: line-through;
+        cursor: pointer;
+      }
     }
 
     .media {
