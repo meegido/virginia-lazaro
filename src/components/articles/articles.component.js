@@ -1,4 +1,5 @@
 import './articles.styles.scss'
+import {navigate} from '@reach/router'
 
 export const ArticlesComponent = ({articles}) => {
   const handleApplyFilter = event => {
@@ -14,7 +15,14 @@ export const ArticlesComponent = ({articles}) => {
         return (
           <article key={article.title} className="article">
             <div className="article-header">
-              <h2 className="article-category">{article.category}</h2>
+              <h2
+                className="article-category"
+                onClick={async event => {
+                  navigate(`/category/${article.category}`)
+                }}
+              >
+                {article.category}
+              </h2>
               <a className="media" href={article.media_link}>
                 {article.media_title}
               </a>
