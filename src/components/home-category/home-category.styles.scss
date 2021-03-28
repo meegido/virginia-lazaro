@@ -7,7 +7,7 @@
   &.pixels {
     flex-direction: row;
   }
-  
+
   &.culture, &.interviews {
     flex-direction: row-reverse;
   }
@@ -44,7 +44,7 @@
     &.pixels, &.interviews {
       grid-template-columns: repeat(2, 1fr);
     }
-  
+
     &.culture {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -62,16 +62,16 @@
   }
 }
 
-@media (min-width: 90em) {
+@media (min-width: 85em) {
   .row {
     grid-gap: 6em;
     margin-bottom: 3em;
     &.pixels {
       grid-template-columns: repeat(12, 1fr);
     }
-  
+
     &.culture, &.interviews  {
       grid-template-columns: repeat(14, 1fr);
     }
-  } 
+  }
 }

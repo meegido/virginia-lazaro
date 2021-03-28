@@ -1,7 +1,7 @@
 .blur {
     filter: blur(5px) grayscale(10%);
   }
-  
+
 .contrast {
   filter: brightness(90%);
   filter: contrast(400%);
@@ -30,17 +30,17 @@
     @content
   }
 }
-  
+
 .category-article {
   &:first-child {
     border-top: 1px solid black;
   }
-  
+
   .article-title {
     height: auto;
     margin: .5em 0 .2em;
   }
-  
+
   .article-info {
     @include info(row, space-between);
 
@@ -55,7 +55,7 @@
       text-align: left;
     }
   }
-  
+
   .article-content {
     @include info(column, space-between);
     .image-container {
@@ -101,14 +101,14 @@
   }
 }
 
-@media only screen and (min-width: 90em) {
+@media only screen and (min-width: 85em) {
   .category-article {
     &:nth-child(3) {
       border-top: none;
     }
     $width: 120%, 70%, 70%, 120%, 120%, 70%, 70%, 120%, 80%, 110%, 80%, 110%;
     $justify: start, end, start, end, start, end, start, end, start, end, start, end;
-    
+
     @for $i from 1 through length($width) {
       &:nth-child(#{length($width)}n+#{$i}) {
           width: nth($width, $i)
@@ -176,14 +176,14 @@
     }
   }
 
-  
+
   .category-article {
     @include each(4) {
       .article-title {
         margin-bottom: 0;
         width: 70%
       }
-      
+
       .article-info {
         justify-content: start;
         .media {
@@ -208,7 +208,7 @@
       }
     }
   }
-  
+
   .category-article {
     @include each(5) {
       .article-content {
