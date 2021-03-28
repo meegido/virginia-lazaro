@@ -1,10 +1,10 @@
 import {render, screen} from '@testing-library/react'
-import Home from '../Home'
+import {Home} from '../home.page'
 import * as ApiClient from '../../../client/ApiClient'
 
 jest.mock('../../../client/ApiClient')
 
-test('Home renders articles information', async () => {
+xtest('Home renders articles information', async () => {
   ApiClient.fetchCategories.mockResolvedValue({
     culture: [
       {

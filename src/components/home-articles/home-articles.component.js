@@ -1,5 +1,4 @@
 import {useRef} from 'react'
-import '../assets/posterize.svg'
 import './home-articles.styles.scss'
 
 export const HomeArticles = ({

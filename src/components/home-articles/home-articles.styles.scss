@@ -19,10 +19,6 @@
   filter: invert(100%);
 }
 
-.posterize {
-  filter: url(#posterize);
-}
-
 @mixin info($direction, $align) {
   flex-direction: $direction;
   justify-content: $align;

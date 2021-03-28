@@ -6,6 +6,7 @@ import './home.styles.scss'
 import {Context} from '../../LanguageProvider'
 
 export const Home = () => {
+  console.log(' renderizando')
   const [state] = useContext(Context)
   const [loaded, setStatus] = useState(false)
   const [categories, setCategories] = useState({})
