@@ -10,7 +10,12 @@ export const Projects = () => {
       <main className="projects-container">
         <article className="espanlol">
           <div className="header">
-            <div className="project-header"></div>
+            <div className="project-header">
+              <ChangeImageOnOver 
+                primaryImg="https://res.cloudinary.com/meegido/image/upload/v1616409521/portada_xyklpy.jpg"
+                overImg="https://res.cloudinary.com/meegido/image/upload/c_scale,h_830,w_617/v1617352280/contraportada_eyurlz.jpg"
+                />
+            </div>
             <div className="description">
               <div className="explanation">
                 <h3>Descripción</h3>

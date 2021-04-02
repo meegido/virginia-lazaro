@@ -6,11 +6,8 @@
       display: grid;
       grid-template-columns: 1fr;
       .project-header {
-        background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616408517/portada_xyklpy.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
         opacity: .3;
-        height: 420px;
+        height: auto;
         margin-bottom: 2em;
       }
       .description {
@@ -67,20 +64,8 @@
     margin: 2em 4em;
     .espanlol {
       .header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        .project-header {
-          grid-column: 1 / 1;
-          background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616408517/portada_xyklpy.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          opacity: .3;
-          height: 460px;
-        }
-
+        display: block;
         .description {
-          grid-column: 2 / 2;
-          padding-left: 3em;
           .explanation {
             display: flex;
             flex-direction: column;
@@ -129,20 +114,7 @@
     margin: 2em 4em;
     .espanlol {
       .header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        .project-header {
-          grid-column: 1 / 1;
-          background-image: url(https://res.cloudinary.com/meegido/image/upload/v1616408517/portada_xyklpy.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          opacity: .3;
-          height: 460px;
-        }
-
         .description {
-          grid-column: 2 / 2;
-          padding-left: 2em;
           .explanation {
             display: flex;
             flex-direction: column;
@@ -175,8 +147,6 @@
           place-items: center;
           grid-gap: 1em;
           .cover {
-            background-repeat: no-repeat;
-            background-size: contain;
             height: 300px;
             width: 100%;
           }
@@ -190,8 +160,11 @@
   .projects-container {
     .espanlol {
       .header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         .project-header {
-          height: 600px;
+          height: auto;
+          margin-right: 2em;
         }
       }
       .chapters-container {
@@ -210,8 +183,11 @@
   .projects-container {
     .espanlol {
       .header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         .project-header {
-          height: 600px;
+          height: auto;
+          margin-right: 2em;
         }
       }
       .chapters-container {
@@ -229,11 +205,6 @@
 @media only screen and (min-width: 83em) and (orientation: landscape) {
   .projects-container {
     .espanlol {
-      .header {
-        .project-header {
-          height: 780px;
-        }
-      }
       .chapters-container {
         .chapters {
           grid-gap: 2em;
@@ -250,11 +221,6 @@
  .projects-container {
    margin: 4em 16em;
    .espanlol {
-    .header {
-      .project-header {
-        height: 766px;
-      }
-    }
     .chapters-container {
       .chapters {
         grid-gap: 2em;
