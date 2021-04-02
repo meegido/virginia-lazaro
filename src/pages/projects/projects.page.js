@@ -1,4 +1,6 @@
 import {Header} from '../../components/header/header.component'
+import { ChangeImageOnOver } from '../../components/project-images/change-image-on-over.component'
+import {chapters} from './images'
 import './projects.styles.scss'
 
 export const Projects = () => {
@@ -30,15 +32,12 @@ export const Projects = () => {
           <div className="chapters-container">
             <h3 className="chapters-header">Índice</h3>
             <div className="chapters">
-              <div className="cover chapter-1"></div>
-              <div className="cover chapter-2"></div>
-              <div className="cover chapter-3"></div>
-              <div className="cover chapter-4"></div>
-              <div className="cover chapter-5"></div>
-              <div className="cover chapter-6"></div>
-              <div className="cover chapter-7"></div>
-              <div className="cover chapter-8"></div>
-              <div className="cover chapter-9"></div>
+              {chapters.map((chapter) => 
+                <ChangeImageOnOver 
+                  key={chapter.primary}
+                  primaryImg={chapter.primary} 
+                  overImg={chapter.over} />
+              )}
             </div>
           </div>
         </article>
