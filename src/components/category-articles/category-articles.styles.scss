@@ -35,27 +35,13 @@
   &:first-child {
     border-top: 1px solid black;
   }
-
   .article-title {
     height: auto;
-    margin: .5em 0 .2em;
+    margin: .2em 0 .2em;
   }
-
   .article-info {
-    @include info(row, space-between);
-
-    .media {
-      margin: .5em 0;
-    }
-
-    .date {
-      font-family: 'New York Extra Large Regular Italic';
-      font-weight: 100;
-      font-size: 0.8rem;
-      text-align: left;
-    }
+    margin-bottom: .4em;
   }
-
   .article-content {
     @include info(column, space-between);
     .image-container {
@@ -68,8 +54,18 @@
         padding-top: 75%;
       }
     }
-    .excerpt {
-      width: 100%;
+    .article-excerpt {
+      margin: 1em 0;
+      .date {
+        font-family: 'New York Extra Large Regular';
+        font-size: .9em;
+        font-weight: bold;
+        border-right: 1px solid black;
+        padding-right: .5em;
+      }
+      .excerpt {
+        padding-left: .5em;
+      }
     }
   }
 }
@@ -127,17 +123,7 @@
       margin-bottom: 0;
     }
     .article-info {
-      justify-content: start;
-      .media {
-        margin: .6em 0;
-        width: 70%;
-        text-align: right;
-      }
-      .date {
-        width: 30%;
-        text-align: right;
-        margin-left: 2em;
-      }
+      margin: .2em 0 .5em;
     }
     .article-content {
       display: flex;
@@ -148,21 +134,16 @@
          padding-top: 120%;
         }
       }
-    }
-
-    .excerpt {
-      padding-left: 1em;
+      .article-excerpt {
+        padding-left: 1em;
+        width: 80%;
+      }
     }
   }
-
   .category-article:nth-child(2) {
     .article-content {
       display: flex;
       flex-direction: column;
-    }
-
-    .excerpt {
-      padding-right: 1em;
     }
   }
 
@@ -176,36 +157,22 @@
     }
   }
 
-
   .category-article {
     @include each(4) {
       .article-title {
         margin-bottom: 0;
         width: 70%
       }
-
-      .article-info {
-        justify-content: start;
-        .media {
-          margin: .6em 0;
-          width: 60%;
-          text-align: right;
-        }
-        .date {
-          width: 40%;
-          text-align: right;
-          margin-left: 1em;
-        }
-      }
       .article-content {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        .article-excerpt {
+          padding-left: 1em;
+          width: 80%;
+        }
       }
-      .excerpt {
-        padding-left: 1em;
-        margin-top: 0;
-      }
+      
     }
   }
 
@@ -215,18 +182,13 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-      }
-      .excerpt {
-        padding-right: 1em;
-        margin-top: 0;
+        .article-excerpt {
+          padding-right: 1em;
+          width: 80%;
+        }
       }
     }
   }
 }
-
-
-
-
-
 
 //https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb

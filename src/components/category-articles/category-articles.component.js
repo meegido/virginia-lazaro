@@ -23,20 +23,23 @@ export const CategoryArticles = ({
       <h3 className="article-title">{title}</h3>
       <div className="article-info">
         <a className="media" href={media_link}>{media_title}</a>
-        <p className="date">{publication_date}</p>
       </div>
       <div className="article-content">
-        <div className="image-container" onMouseEnter={handleApplyFilter}>
+        <div className="image-container">
           <div
+            onMouseEnter={handleApplyFilter}
             ref={imageRef}
             className="article-image"
             style={{
               backgroundImage: 'url(' + image_url + ')',
             }}
             alt="article"
-          ></div>
+          />
         </div>
-        <p className="excerpt">{excerpt}</p>
+        <div className="article-excerpt">
+          <span className="date">{publication_date}</span>
+          <span className="excerpt">{excerpt}</span>
+        </div>
       </div>
     </article>
   )
