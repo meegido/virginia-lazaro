@@ -29,19 +29,22 @@ export const ArticlesComponent = ({articles}) => {
             </div>
             <div className="article-title">
               <h3 className="title">{article.title}</h3>
-              <p className="date">{article.publication_date}</p>
             </div>
             <div className="article-content">
-              <div className="image-container" onMouseEnter={handleApplyFilter}>
+              <div className="image-container">
                 <div
                   className="article-image"
+                  onMouseEnter={handleApplyFilter}
                   style={{
                     backgroundImage: 'url(' + article.image_url + ')',
                   }}
                   alt="article"
                 />
               </div>
-              <p className="excerpt">{article.excerpt}</p>
+              <div class="article-excerpt">
+                <span className="date">{article.publication_date}</span>
+                <span className="excerpt">{article.excerpt}</span>
+              </div>
             </div>
           </article>
         )
