@@ -23,8 +23,6 @@ export const HomeArticles = ({
       <h3 className="article-title">{title}</h3>
       <div className="article-info">
         <a className="media" href={media_link}>{media_title}</a>
-        <p className="date">{publication_date}</p>
-
       </div>
       <div className="article-content">
         <div className="image-container" onMouseEnter={handleApplyFilter}>
@@ -37,7 +35,10 @@ export const HomeArticles = ({
             alt="article"
           ></div>
         </div>
-        <p className="excerpt">{excerpt}</p>
+        <div class="article-excerpt">
+        <span className="date">{publication_date}</span>
+        <span className="excerpt">{excerpt}</span>
+        </div>
       </div>
     </article>
   )
