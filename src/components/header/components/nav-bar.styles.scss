@@ -91,7 +91,7 @@
 		.burguer-wrapper {
 			.burguer {
 				top: 1rem;
-				left: 3rem;
+				left: 4rem;
 			}
 		}
 		.nav-list {
@@ -109,138 +109,26 @@
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
 	.nav {
-		width: 100vw;
-		position: static;
 		.burguer-wrapper {
-			.burguer {
-				display: none;
-			}
-		}
-		.nav-list {
-			transform: unset;
-			display: flex;
-			flex-direction: row;
-			padding-left: 0;
-			position: relative;
-			left: 15em;
-			top: auto;
-			height: auto;
-
-			li {
-				padding: 0.4em 4em;
-				font-size: .7em;
+			.burger {
+				left: 2rem;
 			}
 		}
 	}
 }
 
 @media only screen and (min-width: 64em) and (orientation: landscape) {
-	.nav {
-		position: static;
-		width: 100vw;
-		.burguer-wrapper {
-			.burguer {
-				display: none;
-			}
-		}
-		.nav-list {
-			transform: unset;
-			display: flex;
-			flex-direction: row;
-			padding-left: 0;
-			position: relative;
-			left: 24em;
-			top: auto;
-			height: auto;
-
-			li {
-				padding: 0.4em 2em;
-				font-size: 1em;
-				&:first-child {
-					padding-top: 0.4em;
-				}
-			}
-		}
-	}
+	
 }
 
 @media only screen and (min-width: 64em) and (orientation: portrait) {
-	.nav {
-		position: static;
-		.burguer-wrapper {
-			.burguer {
-				display: none;
-			}
-		}
-		.nav-list {
-			transform: unset;
-			display: flex;
-			flex-direction: row;
-			padding-left: 0;
-			position: relative;
-			left: 25em;
-			top: auto;
-			height: auto;
-
-			li {
-				padding: 0.4em 2em;
-				font-size: 1em;
-				&:first-child {
-					padding-top: 0.4em;
-				}
-			}
-		}
-	}
+	
 }
 
 @media only screen and (min-width: 85em) and (orientation: landscape) {
-	.nav {
-		position: static;
-		.nav-list {
-			transform: unset;
-			display: flex;
-			flex-direction: row;
-			padding-left: 0;
-			position: relative;
-			left: 43em;
-			top: auto;
-			height: auto;
-
-			li {
-				padding: 0.4em 2em;
-				font-size: 1em;
-				&:first-child {
-					padding-top: 0.4em;
-				}
-			}
-		}
-	}
+	
 }
 
 @media (min-width: 90em) {
-	.nav {
-		position: static;
-		.burguer-wrapper {
-			.burguer {
-				display: none;
-			}
-		}
-		.nav-list {
-			transform: unset;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			padding-left: 0;
-			position: relative;
-			left: 58em;
-			top: 0;
-			height: auto;
-
-			li {
-				padding: 0.4em 5em;
-				font-size: 1em;
-			}
-		}
-	}
+	
 }
