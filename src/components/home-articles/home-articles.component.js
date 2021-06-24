@@ -35,7 +35,7 @@ export const HomeArticles = ({
             alt="article"
           ></div>
         </div>
-        <div class="article-excerpt">
+        <div className="article-excerpt">
         <span className="date">{publication_date}</span>
         <span className="excerpt">{excerpt}</span>
         </div>

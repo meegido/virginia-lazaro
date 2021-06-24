@@ -41,7 +41,7 @@ export const ArticlesComponent = ({articles}) => {
                   alt="article"
                 />
               </div>
-              <div class="article-excerpt">
+              <div className="article-excerpt">
                 <span className="date">{article.publication_date}</span>
                 <span className="excerpt">{article.excerpt}</span>
               </div>

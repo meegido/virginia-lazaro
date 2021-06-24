@@ -15,15 +15,8 @@ const NavBarComponent = () => {
   }
 
   return (
-    <div className="nav-wrapper">
+    <div className="nav-container">
       <nav className={`nav ${isOpen ? "open" : ""}`}>
-       <div className="burguer-wrapper">
-          <button onClick={toggleNav} className="burguer">
-            <span className={`${isOpen ? "open" : ""}`}></span>
-            <span className={`${isOpen ? "open" : ""}`}></span>
-            <span className={`${isOpen ? "open" : ""}`}></span>
-        </button>
-       </div>
         <ul className={`nav-list ${isOpen ? "open" : ""}`}>
           <li>
             <Link to="/about">{navBarConent[language].about}</Link>
@@ -35,6 +28,13 @@ const NavBarComponent = () => {
             <Link to="/projects">{navBarConent[language].projects}</Link>
           </li>
         </ul>
+        <div className="burguer-wrapper">
+          <button onClick={toggleNav} className="burguer">
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+        </button>
+       </div>
       </nav>
     </div>
   )
