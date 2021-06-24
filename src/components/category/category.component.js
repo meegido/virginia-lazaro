@@ -3,7 +3,9 @@ import './category.styles.scss'
 
 export const Category = ({articles, name}) => (
   <section className={`category ${name}`}>
-    <h2 className={`category-title`}>{name}</h2>
+    <div className="container-titles">
+      <h2 className={`category-titles`}>{name}</h2>
+    </div>
     <div className={`container ${name}`}>
       {articles.map(article => {
         return (

@@ -32,9 +32,6 @@
 }
 
 .category-article {
-  &:first-child {
-    border-top: 1px solid black;
-  }
   .article-title {
     height: auto;
     margin: .2em 0 .2em;
@@ -71,14 +68,6 @@
   }
 }
 
-@media only screen and (min-width: 25em) and (orientation: landscape) {
-  .category-article {
-    &:nth-child(2) {
-      border-top: 1px solid black;
-    }
-  }
-}
-
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .category-article {
     &:nth-child(2) {
@@ -87,16 +76,6 @@
   }
 }
 
-@media only screen and (min-width: 64em) and (orientation: landscape) {
-  .category-article {
-    &:nth-child(2) {
-      border-top: 1px solid black;
-    }
-    &:nth-child(3) {
-      border-top: 1px solid black;
-    }
-  }
-}
 
 @media only screen and (min-width: 85em) {
   .category-article {
@@ -137,8 +116,8 @@
         }
       }
       .article-excerpt {
-        margin-top: 0;
         padding-left: 1em;
+        margin-top: 0;
         width: 80%;
       }
     }
