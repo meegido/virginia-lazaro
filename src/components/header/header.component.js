@@ -7,31 +7,19 @@ import './header.styles.scss'
 
 
 export const Header = () => {
-  const [state, dispatch] = useContext(Context)
+  const [state] = useContext(Context)
   const {language} = state
    
   useEffect(() => {
     localStorage.setItem('language', state.language)
   })
 
-  function handleLanguage() {
-    const {language} = state
-    if (language === 'es') {
-      localStorage.setItem('language', 'en')
-      dispatch({type: 'SET_LANGUAGE', language: 'en'})
-      return
-    }
-    localStorage.setItem('language', 'es')
-    dispatch({type: 'SET_LANGUAGE', language: 'es'})
-  }
 
   return (
     <header className="main-header">
       <div className="main-nav">
         <NavBarComponent />
-        <div className="language" onClick={handleLanguage}>
-          <p className="lenguage-text">{headerContent[language].language}</p>
-        </div>
+       
       </div>
       <div className="header">
         <div className="subtitle">

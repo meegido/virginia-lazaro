@@ -3,12 +3,14 @@ export const navBarConent = {
     home: 'home',
     about: 'about',
     articles: 'artículos',
-    projects: 'proyectos'
+    projects: 'proyectos',
+    language: 'ES'
   },
   en: {
     home: 'home',
     about: 'about',
     articles: 'articles',
-    projects: 'projects'
+    projects: 'projects',
+    language: 'EN'
   },
 }

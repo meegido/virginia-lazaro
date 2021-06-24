@@ -5,15 +5,6 @@
 		display: flex;
     flex-direction: row;
     justify-content: space-between;
-		.language {
-			margin: 1.5em 1em 0 0;
-			.lenguage-text {
-				margin: 0;
-				color: #0077b6;
-				font-size: .9em;
-				letter-spacing: .1em;
-			}
-		}
 	}
 	.header {
 		display: flex;
@@ -21,7 +12,7 @@
 		align-items: center;
 		border-top: 1px solid black;
 		border-bottom: 2px solid black;
-		margin-top: 1.5em;
+		margin-top: 3.5em;
 		
 		.title {
 			display: inline-flex;
@@ -47,25 +38,8 @@
 	}
 }
 
-@media (min-width: 25em) and (orientation: landscape) {
-	.main-header {
-		.main-nav {
-			.language {
-				margin: 1.5em 4em 0 0;
-			}
-		}
-	}
-}
-
 @media (min-width: 48em) and (orientation: portrait) {
 	.main-header {
-		
-		.main-nav {
-			.language {
-    		margin-bottom: 1em;
-				margin-right: 2em;
-			}
-		}
 		.header {
 			margin-top: 0;
 			.title {
@@ -95,15 +69,6 @@
 
 @media (min-width: 64em) and (orientation: landscape) {
 	.main-header {
-		.main-nav {
-			.language {
-    		margin-bottom: 1.3em;
-				margin-right: 4em;
-				.language-text {
-					font-size: 1em;
-				}
-			}
-		}
 		.header {
 			margin-top: 0;
 			.title {
@@ -159,15 +124,6 @@
 
 @media (min-width: 83em) and (orientation: landscape) {
 	.main-header {
-		.main-nav {
-			.language {
-    		margin-bottom: 1.3em;
-				margin-right: 26em;
-				.language-text {
-					font-size: 1em;
-				}
-			}
-		}
 		.header {
 			margin-top: 0;
 			.title {

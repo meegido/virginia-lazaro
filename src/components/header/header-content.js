@@ -6,7 +6,6 @@ export const headerContent = {
     },
     brandName: "VIRGINIA LÁZARO",
     slogan: "Monumentos, cultura y problemáticas de lo digital",
-    language: "ES"
   },
   en: {
     role: {
@@ -15,6 +14,5 @@ export const headerContent = {
     },
     brandName: "VIRGINIA LÁZARO",
     slogan: "Monuments, culture and new perspective of digital issues",
-    language: "EN"
   }
 }
