@@ -33,7 +33,7 @@ const NavBarComponent = () => {
   return (
     <div className="nav-container">
       <nav className={`nav`}>
-        <ul className={`nav-list ${isOpen ? "open" : ""}`}>
+        <ul className={`nav-list ${isOpen ? "open" : ""}`} >
           <li>
             <Link to="/">Home</Link>
           </li>
