@@ -25,7 +25,6 @@
 }
 
 .home-article {
-  border-top: 1px solid black;
   &:nth-child(2) {
     border-top: none;
   }
@@ -107,25 +106,11 @@
 }
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
-  .home-article {
-    &:nth-child(2) {
-      border-top: 1px solid black;
-    }
-    &:nth-child(3) {
-      border-top: 1px solid black;
-    }
-  }
+
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
-  .home-article {
-    &:nth-child(2) {
-      border-top: 1px solid black;
-    }
-    &:nth-child(3) {
-      border-top: 1px solid black;
-    }
-  }
+
 
   .home-article.pixels {
     &:first-child {
