@@ -41,12 +41,12 @@
 
     .article-category {
       margin: .2em 0;
-      &:hover {
-        text-decoration: line-through;
-        cursor: pointer;
-      }
     }
-    .media {
+    .category-more {
+      font-family: 'New York Extra Large Regular Italic';
+      font-size: 1rem;
+      margin-right: 1em;
+      color: #0077b6;
       margin-bottom: .2em;
     }
   }
@@ -56,10 +56,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    // change to random flex-end - flex-start
+    margin-bottom: .5em;
+   
     .title {
-      margin: 0 0 .5em 0;
+      margin: .2em 0 .2em;
     }
   }
 
@@ -139,10 +139,9 @@
         margin-top: .3em;
         display: flex;
         align-items: baseline;
-        margin-bottom: .2em;
+        margin-bottom: .5em;
 
         .title {
-          width: 66%;
           margin-top: 0.5em;
         }
       }
@@ -193,11 +192,6 @@
 
     .article {
       @include each(3) {
-        .article-title {
-          .title {
-            width: 50%;
-          }
-        }
         .article-content {
           display: flex;
           flex-direction: row;
@@ -243,11 +237,6 @@
 
     .article {
       @include each(7) {
-        .article-title {
-          .title {
-            width: 50%;
-          }
-        }
         .article-content {
           display: flex;
           flex-direction: row-reverse;
