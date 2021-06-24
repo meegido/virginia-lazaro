@@ -189,14 +189,14 @@
 
   .home-article.culture {
     &:first-child {
-      grid-column: 1 / 4;
+      grid-column: 1 / 5;
       .article-image {
         padding-top: 160%
       }
     }
 
     &:nth-child(2) {
-      grid-column: 4 / 11;
+      grid-column: 5 / 11;
       .article-content {
         display: flex;
         flex-flow: column-reverse;
