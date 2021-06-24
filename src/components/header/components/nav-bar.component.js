@@ -48,7 +48,7 @@ const NavBarComponent = () => {
           </li>
           <li>
              <div className="language" onClick={handleLanguage}>
-              <p className="lenguage-text">{navBarConent[language].language}</p>
+              <p className="language-text">{navBarConent[language].language}</p>
             </div>
           </li>
         </ul>
