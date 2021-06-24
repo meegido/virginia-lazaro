@@ -1,6 +1,6 @@
 
 .projects-container {
-  margin: 2em;
+  margin: 0 2em;
   .espanlol {
     .header {
       display: grid;
@@ -61,7 +61,7 @@
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .projects-container {
-    margin: 2em 4em;
+    margin: 1em 4em;
     .espanlol {
       .header {
         display: block;
@@ -111,7 +111,7 @@
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .projects-container {
-    margin: 2em 4em;
+    margin: 1em 4em;
     .espanlol {
       .header {
         .description {
@@ -219,7 +219,7 @@
 
 @media (min-width: 90em) {
  .projects-container {
-   margin: 4em 16em;
+    margin: 3em 16em;
    .espanlol {
     .chapters-container {
       .chapters {

@@ -1,5 +1,5 @@
 .about-container {
-  margin: 2em;
+  margin: 1em;
   display: flex;
   flex-direction: column;
   .profile-container {
@@ -58,7 +58,7 @@
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .about-container {
-    margin: 3em 3em 3em 4em;
+    margin: 1em 3em 3em 4em;
     flex-direction: row;
     .profile-container {
       margin-right: 3em;
@@ -72,7 +72,7 @@
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .about-container {
-    margin: 3em 4em;
+    margin: 1em 4em;
     flex-direction: row;
 
     .profile-container {
@@ -99,7 +99,7 @@
 
 @media (min-width: 90em) {
   .about-container {
-    margin: 4em 16em;
+    margin: 3em 16em;
     .profile-container {
       width: 80%;
       .profile {

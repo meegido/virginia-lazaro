@@ -1,21 +1,21 @@
 .articles-container {
-  margin: 2em;
+  margin: 0 2em;
 }
 
 @media only screen and (min-width: 25em) and (orientation: landscape) {
   .articles-container {
-    margin: 2em 4em;
+    margin: 1em 4em;
   }
 }
 
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .articles-container {
-    margin: 2em 4em;
+    margin: 1em 4em;
   }
 }
 
 @media (min-width: 90em) {
  .articles-container {
-   margin: 4em 16em;
+    margin: 1em 16em;
  }
 }
