@@ -113,7 +113,7 @@
 		.header {
 			margin-top: 0;
 			.title {
-				font-size: calc(1rem + ((1vw - 0.48em) * 6.7619));
+				font-size: calc(1rem + ((1vw - 0.48em) * 3.7619));
 			}
 			.subtitle {
 				font-size: 1.2rem;
@@ -133,27 +133,4 @@
 			}
 		}
 	}
-}
-
-@media (min-width: 90em)  {
-	// .main-header {
-	// 	margin-top: 0;
-	// 	.main-nav {
-
-	// 		.language {
-  //   		margin-bottom: 1.3em;
-	// 			margin-right: 39em;
-	// 		}
-	// 	}
-	// 	.header {
-	// 		margin-top: 0;
-	// 		.title {
-	// 			font-size: 3.2em;
-	// 		}
-	// 		.subtitle {
-	// 			font-size: 0.9rem;
-	// 			padding: 0 10em;
-	// 		}
-	// 	}
-	// }
 }
