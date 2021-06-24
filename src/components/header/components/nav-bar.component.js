@@ -38,13 +38,13 @@ const NavBarComponent = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">{navBarConent[language].about}</Link>
-          </li>
-          <li>
             <Link to="/articles">{navBarConent[language].articles}</Link>
           </li>
           <li>
             <Link to="/projects">{navBarConent[language].projects}</Link>
+          </li>
+          <li>
+            <Link to="/about">{navBarConent[language].about}</Link>
           </li>
           <li>
              <div className="language" onClick={handleLanguage}>
