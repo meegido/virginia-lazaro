@@ -16,18 +16,10 @@
     box-shadow: -2px 1px 22px rgba(31, 45, 39, 1);
     .profile {
       opacity: 0;
-  
       .avatar {
-        
         mix-blend-mode: darken;
         width: 100%;
         height: 320px;
-       
-        
-      }
-      .contact {
-        text-align: center;
-        margin-left: 2em;
       }
     }
     .profile-data {
@@ -50,6 +42,26 @@
      
       .curriculum-description-text {
         margin-top: 0;
+      }
+    }
+    .contact-container {
+      .contact-title {
+        margin-top: 2em;
+        margin-bottom: .2em;
+      }
+      .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        .insta-link {
+          width: 16%;
+          padding-right: 1em;
+          .insta-icon {
+            width: 100%;
+          }
+        }
       }
     }
     
@@ -117,6 +129,22 @@
     .profile-description {
       width: 100%;
       padding-right: 2em;
+
+      .contact-container {
+        .contact-title {
+          font-size: 22px;
+          margin-bottom: .5em;
+        }
+        .contact {
+          .insta-link {
+            width: 8%;
+            padding-right: 1em;
+            .insta-icon {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }
