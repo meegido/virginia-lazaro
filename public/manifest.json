@@ -1,13 +1,7 @@
 {
   "short_name": "Virginia Lázaro",
-  "name": "Virginia Lázaro",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
-  ],
+  "name": "Virginia Lázaro cultural critic writter",
+  "icons": [],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
