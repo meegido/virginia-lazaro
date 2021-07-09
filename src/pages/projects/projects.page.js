@@ -12,6 +12,7 @@ export const Projects = () => {
           <div className="header">
             <div className="project-header">
               <ChangeImageOnOver 
+                className="project-image"
                 primaryImg="https://res.cloudinary.com/meegido/image/upload/v1616409521/portada_xyklpy.jpg"
                 overImg="https://res.cloudinary.com/meegido/image/upload/c_scale,h_830,w_617/v1617352280/contraportada_eyurlz.jpg"
                 />
@@ -39,6 +40,7 @@ export const Projects = () => {
             <div className="chapters">
               {chapters.map((chapter) => 
                 <ChangeImageOnOver 
+                  className="chapters-image"
                   key={chapter.primary}
                   primaryImg={chapter.primary} 
                   overImg={chapter.over} />

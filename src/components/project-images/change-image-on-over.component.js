@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 
-export const ChangeImageOnOver = ({primaryImg, overImg}) => {
+export const ChangeImageOnOver = ({primaryImg, overImg, className}) => {
   const imageRef = useRef(null)
   return ( 
     <>
       <img src={primaryImg} 
-        className="cover" 
+        className={className}
         alt="" 
         ref={imageRef} 
         onMouseOver={() => {

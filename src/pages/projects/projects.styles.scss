@@ -6,9 +6,14 @@
       display: grid;
       grid-template-columns: 1fr;
       .project-header {
-        opacity: .3;
+        width: 100%;
         height: auto;
         margin-bottom: 2em;
+
+        .project-image {
+          width: 100%;
+          padding-right: 1em;
+        }
       }
       .description {
         .explanation {
@@ -49,7 +54,7 @@
       grid-template-columns: repeat(2, 1fr);
       place-items: center;
       grid-gap: 1em;
-      .cover {
+      .chapters-image {
         background-repeat: no-repeat;
         background-size: contain;
         height: 220px;
@@ -97,7 +102,7 @@
           grid-template-columns: repeat(2, 1fr);
           place-items: center;
           grid-gap: 1em;
-          .cover {
+          .chapters-image {
             background-repeat: no-repeat;
             background-size: contain;
             height: 500px;
@@ -146,7 +151,7 @@
           grid-template-columns: repeat(3, 1fr);
           place-items: center;
           grid-gap: 1em;
-          .cover {
+          .chapters-image {
             height: 300px;
             width: 100%;
           }
@@ -170,7 +175,7 @@
       .chapters-container {
         .chapters {
           grid-template-columns: repeat(3, 1fr);
-          .cover {
+          .chapters-image {
             height: 430px;
           }
         }
@@ -193,7 +198,7 @@
       .chapters-container {
         .chapters {
           grid-template-columns: repeat(3, 1fr);
-          .cover {
+          .chapters-image {
             height: 430px;
           }
         }
@@ -208,7 +213,7 @@
       .chapters-container {
         .chapters {
           grid-gap: 2em;
-          .cover {
+          .chapters-image {
             height: 575px;
           }
         }
@@ -224,7 +229,7 @@
     .chapters-container {
       .chapters {
         grid-gap: 2em;
-        .cover {
+        .chapters-image {
           height: 606px;
         }
       }
