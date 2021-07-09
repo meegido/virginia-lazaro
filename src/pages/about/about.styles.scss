@@ -14,6 +14,7 @@
     padding: 1em;
     margin-bottom: 1em;
     box-shadow: -2px 1px 22px rgba(31, 45, 39, 1);
+    width: 100%;
     .profile {
       opacity: 0;
       .avatar {
@@ -74,7 +75,6 @@
     flex-direction: row;
     .profile-container {
       margin-right: 3em;
-      height: 50%;
       .profile-data {
         width: 61%;
       }
