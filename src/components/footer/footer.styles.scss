@@ -1,0 +1,27 @@
+footer {
+  border-top: 1px solid black;
+
+  .contact-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .contact {
+      font-family: 'New York Extra Large Semibold';
+      text-transform: uppercase;
+      font-size: .8em;
+      letter-spacing: 0.05rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 83em) {
+  footer {
+    .contact-container {
+      .contact {
+        font-size: 1em;
+      }
+    }
+  }
+}

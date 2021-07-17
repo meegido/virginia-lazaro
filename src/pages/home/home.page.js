@@ -2,6 +2,7 @@ import {useEffect, useState, useContext} from 'react'
 import * as ApiClient from '../../client/ApiClient'
 import {Header} from '../../components/header/header.component'
 import {HomeCategory} from '../../components/home-category/home-category.component'
+import {Footer} from '../../components/footer/footer.component'
 import './home.styles.scss'
 import {Context} from '../../LanguageProvider'
 
@@ -36,6 +37,7 @@ export const Home = () => {
           <HomeCategory articles={categories.interviews} name="interviews" />
         )}
       </main>
+      <Footer />
     </div>
   )
 }
