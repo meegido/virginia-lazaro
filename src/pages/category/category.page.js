@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from 'react'
 import * as ApiClient from '../../client/ApiClient'
 import {Header} from '../../components/header/header.component'
+import {Footer} from '../../components/footer/footer.component'
 import {Category} from '../../components/category/category.component'
 import './category-page.styles.scss'
 import {Context} from '../../LanguageProvider'
@@ -28,6 +29,7 @@ export const CategoryPage = ({categoryName}) => {
       <main className="category-container">
         {isLoaded && <Category articles={category} name={`${categoryName}`} />}
       </main>
+      <Footer />
     </div>
   )
 }

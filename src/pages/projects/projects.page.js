@@ -1,4 +1,5 @@
 import {Header} from '../../components/header/header.component'
+import {Footer} from '../../components/footer/footer.component'
 import { ChangeImageOnOver } from '../../components/project-images/change-image-on-over.component'
 import {chapters} from './images'
 import './projects.styles.scss'
@@ -49,6 +50,7 @@ export const Projects = () => {
           </div>
         </article>
       </main>
+      <Footer />
     </div>
     
   )

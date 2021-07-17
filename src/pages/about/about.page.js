@@ -1,4 +1,5 @@
 import {Header} from '../../components/header/header.component'
+import {Footer} from '../../components/footer/footer.component'
 import './about.styles.scss'
 import {useContext} from 'react'
 import {Context} from '../../LanguageProvider'
@@ -35,6 +36,7 @@ export const About = () => {
         </section>
         <section className="tips"></section>
       </main>
+      <Footer />
     </div>
   )
 }
