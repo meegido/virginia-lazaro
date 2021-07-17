@@ -54,9 +54,9 @@ const NavBarComponent = () => {
         </ul>
         <div className="burguer-wrapper">
           <button onClick={toggleNav} className="burguer">
-            <span className={`${isOpen ? "" : "open"}`}></span>
-            <span className={`${isOpen ? "" : "open"}`}></span>
-            <span className={`${isOpen ? "" : "open"}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
+            <span className={`${isOpen ? "open" : ""}`}></span>
         </button>
        </div>
       </nav>
