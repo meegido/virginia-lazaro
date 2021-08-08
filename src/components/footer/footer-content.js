@@ -1,8 +1,8 @@
 export const footerContent = {
   es: {
-    howToContact: 'Info y contratación:',
+    howToContact: 'Contacto:',
   },
   en: {
-    howToContact: 'Info and contact:'
+    howToContact: 'Contact:'
   }
 }

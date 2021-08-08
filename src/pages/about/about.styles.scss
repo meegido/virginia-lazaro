@@ -2,65 +2,104 @@
   margin: 2em;
   display: flex;
   flex-direction: column;
-  .profile-container {
-    display: inherit;
-    flex-direction: row;
-    background-color: #0077b652;
-    background-image: url('https://res.cloudinary.com/meegido/image/upload/v1614500906/virginia-profile_nakokv.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    border-radius: 25px;
-    padding: 1em;
-    margin-bottom: 1em;
-    box-shadow: -2px 1px 22px rgba(31, 45, 39, 1);
-    width: 100%;
-    .profile {
-      opacity: 0;
-      .avatar {
-        mix-blend-mode: darken;
-        width: 100%;
-        height: 320px;
+  .content {
+    .profile-container {
+      display: inherit;
+      flex-direction: row;
+      background-color: #0077b652;
+      background-image: url('https://res.cloudinary.com/meegido/image/upload/v1614500906/virginia-profile_nakokv.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0.2em;
+      padding: 1em;
+      margin-bottom: 1em;
+      // box-shadow: -2px 1px 22px rgba(31, 45, 39, 1);
+      width: 100%;
+      .profile {
+        opacity: 0;
+        .avatar {
+          mix-blend-mode: darken;
+          width: 100%;
+          height: 320px;
+        }
+      }
+      .profile-data {
+        width: 70%;
+        text-align: right;
+        .metier {
+          filter: drop-shadow(1px 2px 4px #0077b652);
+        }
       }
     }
-    .profile-data {
-      width: 70%;
-      text-align: right;
-      .metier {
-        filter: drop-shadow(1px 2px 4px #0077b652);
-      }
-    }
-  }
-  .profile-description {
-    .metier-description {
-      margin-bottom: 3em;
-    }
-
-    .curriculum-description {
-      .curriculum-description-title {
-        margin-bottom: 0.5em;
-      }
-     
-      .curriculum-description-text {
+    .profile-description {
+      .metier-description {
+        margin-bottom: 3em;
         margin-top: 0;
       }
-    }
-    .contact-container {
-      .contact-title {
-        margin-top: 2em;
-        margin-bottom: .2em;
+  
+      .curriculum-description {
+        .curriculum-description-title {
+          margin-bottom: 0.5em;
+        }
+       
+        .curriculum-description-text {
+          margin-top: 0;
+        }
       }
-      .contact {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        .insta-link {
-          width: 16%;
-          padding-right: 1em;
-          .insta-icon {
-            width: 100%;
+      .contact-container {
+        .contact-title {
+          margin-top: 2em;
+          margin-bottom: .2em;
+        }
+        .contact {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          .insta-link {
+            width: 12%;
+            padding-right: 1em;
+            .insta-icon {
+              width: 100%;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  
+}
+
+@media only screen and (min-width: 25em) and (orientation: landscape) {
+  .about-container {
+    margin: 1em 3em 3em 4em;
+    .content {
+      display: flex;
+      flex-direction: row;
+      .profile-container {
+        margin-right: 3em;
+        .profile {
+          width: 26%;
+          .avatar {
+            width: 220px;
+          }
+        }
+        .profile-data {
+          width: 51%;
+        }
+      }
+      .profile-description {
+        .contact-container {
+          .contact {
+            .insta-link {
+              width: 12%;
+              padding-right: 1em;
+              .insta-icon {
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -69,78 +108,105 @@
   }
 }
 
-@media only screen and (min-width: 25em) and (orientation: landscape) {
-  .about-container {
-    margin: 1em 3em 3em 4em;
-    flex-direction: row;
-    .profile-container {
-      margin-right: 3em;
-      .profile-data {
-        width: 61%;
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: 48em) and (orientation: portrait) {
   .about-container {
     margin: 1em 4em;
-    flex-direction: row;
-
-    .profile-container {
-      margin-right: 3em;
-      width: 52%;
-      height: 50%;
-      .profile {
-        width: 26%;
-        .avatar {
-          width: 220px;
+    .content {
+      flex-direction: row;
+      .profile-container {
+        margin-right: 3em;
+        width: 52%;
+        height: 50%;
+        .profile {
+          width: 26%;
+          .avatar {
+            width: 220px;
+          }
+        }
+        .profile-data {
+          width: 80%;
         }
       }
-      .profile-data {
-        width: 80%;
+  
+      .profile-description {
+        padding-left: 1em;
       }
     }
-
-    .profile-description {
-      padding-left: 1em;
-    }
-    
   }
 }
+
+@media only screen and (min-width: 48em) and (orientation: landscape) {
+  .about-container {
+    margin: 1em 4em;
+    .content {
+      flex-direction: row;
+      .profile-container {
+        margin-right: 3em;
+        width: 52%;
+        height: 50%;
+        .profile {
+          width: 26%;
+          .avatar {
+            width: 220px;
+          }
+        }
+        .profile-data {
+          width: 80%;
+        }
+      }
+  
+      .profile-description {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 64em) and (orientation: landscape) {
+  .about-container {
+    margin: 3em 16em;
+    height: 69vh;
+  }
+} 
 
 @media (min-width: 90em) {
   .about-container {
     margin: 3em 16em;
-    .profile-container {
-      width: 80%;
-      .profile {
-        width: 52%;
-        .avatar {
-          width: 306px;
-          height: 356px;
+    height: 69vh;
+    .content {
+      display: flex;
+      flex-direction: row;
+      .profile-container {
+        width: 80%;
+        height: 100%;
+        .profile {
+          width: 52%;
+          .avatar {
+            width: 306px;
+            height: 356px;
+          }
+        }
+  
+        .profile-data {
+          width: 36%;
         }
       }
-
-      .profile-data {
-        width: 36%;
-      }
-    }
-    .profile-description {
-      width: 100%;
-      padding-right: 2em;
-
-      .contact-container {
-        .contact-title {
-          font-size: 22px;
-          margin-bottom: .5em;
-        }
-        .contact {
-          .insta-link {
-            width: 8%;
-            padding-right: 1em;
-            .insta-icon {
-              width: 100%;
+      .profile-description {
+        width: 100%;
+        padding-right: 2em;
+  
+        .contact-container {
+          .contact-title {
+            font-size: 22px;
+            margin-bottom: .5em;
+          }
+          .contact {
+            .insta-link {
+              width: 8%;
+              padding-right: 1em;
+              .insta-icon {
+                width: 100%;
+              }
             }
           }
         }

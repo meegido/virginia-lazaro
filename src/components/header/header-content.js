@@ -5,7 +5,7 @@ export const headerContent = {
       researcher: 'Investigadora independiente',
     },
     brandName: "VIRGINIA LÁZARO",
-    slogan: "Monumentos, cultura y problemáticas de lo digital",
+    slogan: "Monuments, culture and digital sphere",
   },
   en: {
     role: {
@@ -13,6 +13,6 @@ export const headerContent = {
       researcher: 'Independent researcher',
     },
     brandName: "VIRGINIA LÁZARO",
-    slogan: "Monuments, culture and new perspective of digital issues",
+    slogan: "Monumentos, cultura y esfera digita",
   }
 }

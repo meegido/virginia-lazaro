@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="contact-container">
-        <p className="contact">{footerContent[language].howToContact} hi@virginialazaro.com</p>
+        <p className="contact">{footerContent[language].howToContact} virginialazarovilla@gmail.com</p>
       </div>
     </footer>
   )
